@@ -54,13 +54,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "text_9BkERR": {
-          "type": "text",
-          "settings": {
-            "text": "<strong>Prueba Reni</strong>",
-            "text_style": "subtitle"
-          }
         }
       },
       "block_order": [
@@ -71,8 +64,7 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share",
-        "text_9BkERR"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
