@@ -4,7 +4,7 @@
   bottom: 0;
   width: 100%;
   z-index: 999;
-  pointer-events: none; /* para evitar que tape otros elementos si no hacés hover */
+  pointer-events: none; 
 }
 
 .custom-social-bar .left-bar,
@@ -15,14 +15,13 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  pointer-events: auto; /* permitir interacción */
+  pointer-events: auto; 
 }
 
 .custom-social-bar .left-bar {
   left: 0;
-  padding: 20px 10px;
-  background: #f7f7f7;
-  width: 60px;
+  background: #F4F4F0;
+  width: 99px;
   border-right: 1px solid #e0e0e0;
 }
 
@@ -34,18 +33,27 @@
 .custom-social-bar .side-text {
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #121212;
-  font-weight: bold;
+  color: #1E1E1E;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  rotate: 180deg;
+  margin-top: 220px;
 }
 
 .custom-social-bar .right-icons {
   right: 0;
   padding: 20px 10px;
   background: #f7f7f7;
-  width: 60px;
+  width: 101px;
   border-left: 1px solid #e0e0e0;
   gap: 20px;
 }
