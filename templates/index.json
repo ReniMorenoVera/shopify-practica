@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -6,21 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Sustainable 3D Printing for everyone",
             "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "NEXT STEPS",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
@@ -31,118 +33,71 @@
       },
       "block_order": [
         "heading",
-        "text",
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/printers.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
+        "caption_tJ8nGc": {
+          "type": "caption",
+          "settings": {
+            "caption": "SERVICES",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Digital & circular fabrication expertise",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>From prototypes to furniture, jewelry, and facades, the possibilities are endless. We help individuals and businesses to effortlessly bring their projects to life. Whether you need guidance during the design process or simply require the tools for your project, we're here to assist you.</p>"
+          }
+        },
+        "button_Y8qLyw": {
+          "type": "button",
+          "settings": {
+            "button_label": "DISCOVER OUR SERVICES",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
+        "caption_tJ8nGc",
         "heading",
-        "text"
+        "text",
+        "button_Y8qLyw"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -151,8 +106,17 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "",
+            "text": "<p><em>3D</em></p><p><em>Printing</em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7xWU3h": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p><em>Laser</em></p><p><em>Cutting</em></p>",
             "link_label": "",
             "link": ""
           }
@@ -160,8 +124,8 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "",
+            "text": "<p><em>Expert</em></p><p><em>Consulation</em></p>",
             "link_label": "",
             "link": ""
           }
@@ -169,8 +133,8 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "",
+            "text": "<p><em>Bespoke</em></p><p><em>Fabrication</em></p>",
             "link_label": "",
             "link": ""
           }
@@ -178,6 +142,7 @@
       },
       "block_order": [
         "column1",
+        "column_7xWU3h",
         "column2",
         "column3"
       ],
@@ -186,25 +151,514 @@
         "heading_size": "h1",
         "image_width": "third",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "multicolumn_CBTTnr": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_p8FxXq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/fym-brand.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_P9M38z": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/virgin-hotels-brand.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jgVpMK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/orange-brand.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7NW6ND": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/therme-brand.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JRG7aF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/arup-brand.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_p8FxXq",
+        "column_P9M38z",
+        "column_jgVpMK",
+        "column_7NW6ND",
+        "column_JRG7aF"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Brands we’ve worked with",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "SEE PROJECTS",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_X97zcY": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_VNG7B8": {
+          "type": "caption",
+          "settings": {
+            "caption": "ABOUT FAb.PUB",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_Mfp3gf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your gateway to circular digital fabrication",
+            "heading_size": "h1"
+          }
+        },
+        "text_TcEdFV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fab.Pub is the mobile 3D factory of the future, empowering creativity with minimum carbon footprint. From design to fabrication, we're here to assist you in your entire creative process, transforming your ideas into reality.</p>"
+          }
+        },
+        "button_B6Xfdi": {
+          "type": "button",
+          "settings": {
+            "button_label": "ABOUT US",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_VNG7B8",
+        "heading_Mfp3gf",
+        "text_TcEdFV",
+        "button_B6Xfdi"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_QNhjWj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_KUtyDq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/card_item_carrousel_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DjWA7E": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/card_item_carrousel_2.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FpUFtM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/card_item_carrousel_3.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4VgdDq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/card_item_carrousel_4.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_KUtyDq",
+        "column_DjWA7E",
+        "column_FpUFtM",
+        "column_4VgdDq"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<em>While we employ a wide range of sustainable materials, our primary focus is on the innovative use of </em><em><strong>fermented sugarcane</strong></em><em> as a key fabrication material.</em>",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_ViRdJb": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_iKEh9D": {
+          "type": "caption",
+          "settings": {
+            "caption": "SHOP",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_x73a3G": {
+          "type": "heading",
+          "settings": {
+            "heading": "The circular way of life",
+            "heading_size": "h1"
+          }
+        },
+        "text_hdVhWk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Immerse yourself in a unique shopping experience and join our movement through our innovative bio products.</p>"
+          }
+        },
+        "button_pgeGHz": {
+          "type": "button",
+          "settings": {
+            "button_label": "FIND OUT MORE",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_iKEh9D",
+        "heading_x73a3G",
+        "text_hdVhWk",
+        "button_pgeGHz"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_NJJj9F": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_waCC6B": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/card1.jpg",
+            "title": "<em>Mandala range</em>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_w7xHVz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/card2.png",
+            "title": "<em>Planters</em>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TbQtLw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/card3.jpg",
+            "title": "<em>Furniture</em>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_D4W64n": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/card4_ac27ebdb-9d47-42f2-bc8a-b91d87afe7f6.jpg",
+            "title": "<em>Art Pieces</em>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_waCC6B",
+        "column_w7xHVz",
+        "column_TbQtLw",
+        "column_D4W64n"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_WTAWF3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_f9Aq9K": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow us and become part of our community",
+            "heading_size": "h1"
+          }
+        },
+        "text_egKn6E": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Join us on our journey and get inspired by new designs and the latest innovations.</p>"
+          }
+        },
+        "button_iW6dti": {
+          "type": "button",
+          "settings": {
+            "button_label": "TAKE A LOOK",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_f9Aq9K",
+        "text_egKn6E",
+        "button_iW6dti"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_m4n7CK": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_dkC7bw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/instagram1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MzCkTd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/instagram2.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tiGH4g": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/instagram3.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DkXHTY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/instagram4.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xM4pfr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/instagram5.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_dkC7bw",
+        "column_MzCkTd",
+        "column_tiGH4g",
+        "column_DkXHTY",
+        "column_xM4pfr"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_tqaGyE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pkgw9b": {
+          "type": "heading",
+          "settings": {
+            "heading": "Schedule a consultation with a Fab.Pub Expert today!",
+            "heading_size": "h1"
+          }
+        },
+        "text_3JYmkC": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_9NYxV6": {
+          "type": "button",
+          "settings": {
+            "button_label": "BOOK NOW",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pkgw9b",
+        "text_3JYmkC",
+        "button_9NYxV6"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "image_banner",
     "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "multicolumn",
+    "multicolumn_CBTTnr",
+    "rich_text_X97zcY",
+    "multicolumn_QNhjWj",
+    "rich_text_ViRdJb",
+    "multicolumn_NJJj9F",
+    "rich_text_WTAWF3",
+    "multicolumn_m4n7CK",
+    "rich_text_tqaGyE"
   ]
 }
