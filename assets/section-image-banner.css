@@ -1,13 +1,24 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .banner {
   display: flex;
   position: relative;
-  flex-direction: column;
   z-index: auto;
-  isolation: isolate;
+  align-items: flex-start;
+  max-width: 1240px;
+  height: 740px;
+  margin: 0 auto;
+  z-index: auto;
 }
 
 .banner__box {
-  text-align: center;
+  background: transparent;
+  margin-top: 40px;
+  margin-right: 529px;
 }
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
@@ -159,10 +170,7 @@
 }
 
 .banner__media {
-  height: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
 }
 
@@ -266,135 +274,6 @@
   }
 }
 
-.banner__content {
-  padding: 0;
-  display: flex;
-  position: relative;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-@media screen and (min-width: 750px) {
-  .banner__content {
-    padding: 5rem;
-  }
-
-  .banner__content--top-left {
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  .banner__content--top-center {
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  .banner__content--top-right {
-    align-items: flex-start;
-    justify-content: flex-end;
-  }
-
-  .banner__content--middle-left {
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .banner__content--middle-center {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .banner__content--middle-right {
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  .banner__content--bottom-left {
-    align-items: flex-end;
-    justify-content: flex-start;
-  }
-
-  .banner__content--bottom-center {
-    align-items: flex-end;
-    justify-content: center;
-  }
-
-  .banner__content--bottom-right {
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
-}
-
-@media screen and (max-width: 749px) {
-  .banner--mobile-bottom:not(.banner--stacked) .banner__content {
-    order: 2;
-  }
-
-  .banner:not(.banner--mobile-bottom) .field__input,
-  .banner--mobile-bottom:not(.banner--stacked) .banner__box.color-scheme-1 {
-    background: transparent;
-  }
-}
-
-.banner__box {
-  padding: 4rem 1.5rem;
-  position: relative;
-  height: fit-content;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  word-wrap: break-word;
-  z-index: 1;
-}
-
-.banner--mobile-bottom .banner__box {
-  padding: 4rem 3.5rem;
-}
-
-@media screen and (min-width: 750px) {
-  .banner__box {
-    padding: 4rem 3.5rem;
-  }
-
-  .banner--desktop-transparent .banner__box {
-    padding: 4rem 0;
-    background: transparent;
-    max-width: 89rem;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .banner--desktop-transparent .button--secondary {
-    --alpha-button-background: 0;
-  }
-
-  .banner--desktop-transparent .content-container:after {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 749px) {
-  .banner--mobile-bottom::after,
-  .banner--mobile-bottom .banner__media::after {
-    display: none;
-  }
-}
-
-.banner::after,
-.banner__media::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  background: #000000;
-  opacity: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
-
 .banner__box > * + .banner__text {
   margin-top: 1.5rem;
 }
@@ -434,7 +313,13 @@
 }
 
 .banner__heading {
-  margin-bottom: 0;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 58px;
+  line-height: 1.1;
+  color: white;
+  max-width: 671px;
+  font-family: 'Source Serif 4', serif;
 }
 
 .banner__box .banner__heading + * {
@@ -442,11 +327,21 @@
 }
 
 .banner__buttons {
-  display: inline-flex;
-  flex-wrap: wrap;
+  display: flex;
   gap: 1rem;
-  max-width: 45rem;
-  word-break: break-word;
+}
+
+.banner__buttons .button {
+  background-color: #CAB99C;
+  border: 0.7px solid #1E1E1E;
+  padding: 20px 40px;
+  border-radius: 100px;
+  height: 59px;
+  width: 240px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
 }
 
 @media screen and (max-width: 749px) {
