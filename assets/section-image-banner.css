@@ -2,17 +2,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 .banner {
   display: flex;
   position: relative;
-  z-index: auto;
   align-items: flex-start;
-  max-width: 1240px;
+  width: calc(100% - 200px);
   height: 740px;
   margin: 0 auto;
-  z-index: auto;
+
 }
 
 .banner__box {
@@ -315,12 +315,17 @@
 .banner__heading {
   margin-bottom: 24px;
   font-weight: 600;
-  font-size: 58px;
+  font-size: 48px;
   line-height: 1.1;
   color: white;
-  max-width: 671px;
   font-family: 'Source Serif 4', serif;
+  margin-left: 40px;
 }
+
+.banner__heading strong {
+  font-weight: bold;
+}
+
 
 .banner__box .banner__heading + * {
   margin-top: 1rem;
@@ -334,7 +339,6 @@
 .banner__buttons .button {
   background-color: #CAB99C;
   border: 0.7px solid #1E1E1E;
-  padding: 20px 40px;
   border-radius: 100px;
   height: 59px;
   width: 240px;

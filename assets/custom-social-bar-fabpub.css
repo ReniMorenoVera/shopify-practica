@@ -1,11 +1,4 @@
-.custom-social-bar {
-  position: fixed;
-  top: 100px;
-  bottom: 0;
-  width: 100%;
-  z-index: 999;
-  pointer-events: none; 
-}
+.custom-social-bar {  position: fixed;  top: 0;  bottom: 0;  width: 100%;  z-index: 2;  pointer-events: none; }
 
 .custom-social-bar .left-bar,
 .custom-social-bar .right-icons {
@@ -49,10 +42,14 @@
   margin-top: 220px;
 }
 
+.custom-social-bar .side-text strong {
+  font-weight: bold;
+}
+
 .custom-social-bar .right-icons {
   right: 0;
   padding: 20px 10px;
-  background: #f7f7f7;
+  background: #F4F4F0;
   width: 101px;
   border-left: 1px solid #e0e0e0;
   gap: 20px;

@@ -4,8 +4,8 @@
   font-size: 24px;
   line-height: 120%;
   text-align: center;
-  max-width: 1240px;
   margin: 0 auto;
+  width: 100%;
 }
 .multicolumn-list {
   margin: 0;
@@ -13,10 +13,11 @@
   display: flex;
   gap: 0;
 }
-.multicolumn-list__item {
-  padding: 0;
-  margin: 0;
+
+.page-width {
+  max-width: 100%;
 }
+
 .multicolumn-list__item:nth-child(1) .multicolumn-card {
   background-color: #cab99c;
   height: 310px;

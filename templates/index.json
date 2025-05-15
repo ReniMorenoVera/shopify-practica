@@ -74,7 +74,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>From prototypes to furniture, jewelry, and facades, the possibilities are endless. We help individuals and businesses to effortlessly bring their projects to life. Whether you need guidance during the design process or simply require the tools for your project, we're here to assist you.</p>"
+            "text": "<p class=\"services-description\">From prototypes to furniture, jewelry, and facades, the possibilities are endless. We help individuals and businesses to effortlessly bring their projects to life. Whether you need guidance during the design process or simply require the tools for your project, we're here to assist you.</p>"
           }
         },
         "button": {

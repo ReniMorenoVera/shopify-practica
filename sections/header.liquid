@@ -21,7 +21,57 @@
 <style>
   header-drawer {
     justify-self: start;
-    margin-left: -1.2rem;
+  }
+
+  .header {
+    min-height: 100px;
+  }
+
+  .header__heading-logo-wrapper {
+    width: 100px; 
+    height: auto;
+  }
+
+  .header-wrapper {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: #F4F4F0;
+  }
+
+  @media screen and (max-width: 989px) {
+    .header {
+      min-height: 60px; 
+    }
+
+    .header__heading-logo-wrapper {
+      width: 100px; 
+    }
+  }
+
+
+  @media screen and (max-width: 989px) {
+    #MainContent {
+      padding-top: 60px; /* Debe ser igual a la altura del header móvil */
+    }
+  }
+
+  .section-header {
+    position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-header {
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .header {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
   }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
@@ -53,9 +103,7 @@
     flex-wrap: wrap;
   }
 
-  summary.list-menu__item {
-    padding-right: 2.7rem;
-  }
+  
 
   .list-menu__item {
     display: flex;
@@ -81,6 +129,81 @@
 {%- style -%}
   .header {
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+  }
+
+  .header__heading-logo-wrapper {
+    max-width: 100px;
+  }
+
+  .header-wrapper {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    background-color: #F4F4F0;
+  }
+
+  /* Ocultar carrito e ícono de búsqueda */
+  .header__icon--cart,
+  .header__search,
+  details-modal,
+  .header__icons--localization,
+  .desktop-localization-wrapper,
+  .header__search-form,
+  .modal__toggle-close,
+  .modal__toggle-open,
+  .header__modal-opener {
+    display: none !important;
+  }
+
+  /* Ocultar elementos del menú móvil */
+  .menu-drawer__utility-links,
+  .menu-drawer__search {
+    display: none !important;
+  }
+
+  .list-menu.list-menu--inline {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: 0.025em;
+    color: #000000;
+  }
+
+  .header__active-menu-item {
+    text-transform: uppercase;
+  }
+
+  .header__active-menu-item,
+  .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large.list-menu__item--active {
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 989px) {
+    .header {
+      height: 60px;
+    }
+
+    .header__heading-logo-wrapper {
+      max-width: 100px;
+    }
+  }
+
+  #MainContent {
+    padding-top: 80px; 
+  }
+
+  @media screen and (max-width: 989px) {
+    #MainContent {
+      padding-top: 60px; 
+    }
   }
 
   .section-header {
