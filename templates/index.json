@@ -9,6 +9,10 @@
  */
 {
   "sections": {
+     "custom_social_bar": {
+    "type": "custom-social-bar-fabpub",
+    "settings": {}
+  },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -646,6 +650,7 @@
     }
   },
   "order": [
+    "custom_social_bar",
     "image_banner",
     "rich_text",
     "multicolumn",
