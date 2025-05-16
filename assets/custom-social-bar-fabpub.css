@@ -15,7 +15,7 @@
   left: 0;
   background: #F4F4F0;
   width: 99px;
-  border-right: 1px solid #e0e0e0;
+  border: none;
 }
 
 .custom-social-bar .left-bar img.fabpub-logo {
@@ -59,4 +59,9 @@
   text-decoration: none;
   color: #121212;
   font-size: 20px;
+}
+
+.button.button--primary:after {
+  display: none;
+  box-shadow: none;
 }

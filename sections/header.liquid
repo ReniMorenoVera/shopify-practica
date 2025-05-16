@@ -36,7 +36,7 @@
     position: fixed;
     width: 100%;
     z-index: 1000;
-    background-color: #F4F4F0;
+    background-color: transparent;
   }
 
   @media screen and (max-width: 989px) {
@@ -149,7 +149,7 @@
   /* Ocultar carrito e ícono de búsqueda */
   .header__icon--cart,
   .header__search,
-  details-modal,
+  .details-modal,
   .header__icons--localization,
   .desktop-localization-wrapper,
   .header__search-form,
@@ -165,7 +165,8 @@
     display: none !important;
   }
 
-  .list-menu.list-menu--inline {
+  .list-menu.list-menu--inline,
+  .header__menu-item.list-menu__item.link.focus-inset {
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -177,7 +178,8 @@
     color: #000000;
   }
 
-  .header__active-menu-item {
+  .header__active-menu-item,
+  .header__menu-item.list-menu__item.link.focus-inset {
     text-transform: uppercase;
   }
 
