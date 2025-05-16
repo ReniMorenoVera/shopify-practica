@@ -48,16 +48,27 @@
   </div>
   <div class="right-icons">
     {% if section.settings.instagram_url %}
-      <a href="{{ section.settings.instagram_url }}" target="_blank">Instagram</a>
+      <a href="{{ section.settings.instagram_url }}" target="_blank" aria-label="Instagram">
+        {% render 'icono-instagram' %}
+      </a>
     {% endif %}
+
     {% if section.settings.facebook_url %}
-      <a href="{{ section.settings.facebook_url }}" target="_blank">Facebook</a>
+      <a href="{{ section.settings.facebook_url }}" target="_blank" aria-label="Facebook">
+        {% render 'icono-facebook' %}
+      </a>
     {% endif %}
+
     {% if section.settings.linkedin_url %}
-      <a href="{{ section.settings.linkedin_url }}" target="_blank">LinkedIn</a>
+      <a href="{{ section.settings.linkedin_url }}" target="_blank" aria-label="LinkedIn">
+        {% render 'icono-linkedin' %}
+      </a>
     {% endif %}
+
     {% if section.settings.youtube_url %}
-      <a href="{{ section.settings.youtube_url }}" target="_blank">YouTube</a>
+      <a href="{{ section.settings.youtube_url }}" target="_blank" aria-label="YouTube">
+        {% render 'icono-youtube' %}
+      </a>
     {% endif %}
   </div>
 </section>

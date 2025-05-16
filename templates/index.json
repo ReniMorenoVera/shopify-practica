@@ -13,10 +13,10 @@
       "type": "custom-social-bar-fabpub",
       "settings": {
         "side_text": "Fab.Pub Empowering Circular Fabrication",
-        "instagram_url": "",
-        "facebook_url": "",
-        "linkedin_url": "",
-        "youtube_url": ""
+        "instagram_url": "https://www.instagram.com/fab.pub/",
+        "facebook_url": "https://www.facebook.com/FabPubCo",
+        "linkedin_url": "https://www.linkedin.com/company/fab-pub/",
+        "youtube_url": "https://www.youtube.com/channel/UC3fjOwUPekRBsSoEzs82FcQ"
       }
     },
     "image_banner": {
