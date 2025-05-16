@@ -1,0 +1,19 @@
+<!-- newsletter-popup.liquid -->
+{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
+{{ 'newsletter-popup.js' | asset_url | script_tag }}
+
+<div id="newsletter-popup" class="newsletter-modal">
+  <div class="modal-content">
+    <button class="close-button" onclick="closePopup()">×</button>
+    <div class="popup-logo">
+      <img src="{{ 'logo.svg' | asset_url }}" alt="Logo">
+    </div>
+    <h2>Join our community</h2>
+    <p>Enter your email and get the latest updates on our site</p>
+    <form method="post" action="/contact#newsletter">
+      <input type="email" name="contact[email]" placeholder="Email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <a href="#" onclick="closePopup()">No, thanks</a>
+  </div>
+</div>

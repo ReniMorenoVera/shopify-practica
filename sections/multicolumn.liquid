@@ -123,7 +123,17 @@
                   <h3 class="inline-richtext">{{ block.settings.title }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
+                  <div class="rte">
+                    {{ block.settings.text }}
+                    {%- assign plain_text = block.settings.text | strip_html -%}
+                    {%- if plain_text contains '3D'
+                      or plain_text contains 'Laser'
+                      or plain_text contains 'Expert'
+                      or plain_text contains 'Bespoke'
+                    -%}
+                      {% render 'icon-arrow-multicolumn' %}
+                    {%- endif -%}
+                  </div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a

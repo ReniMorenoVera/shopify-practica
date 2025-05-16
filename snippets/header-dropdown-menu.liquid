@@ -23,7 +23,6 @@
                 >
                   {{- link.title | escape -}}
                 </span>
-                {% render 'icon-caret' %}
               </summary>
               <ul
                 id="HeaderMenu-MenuList-{{ forloop.index }}"
@@ -51,7 +50,6 @@
                           class="header__menu-item link link--text list-menu__item focus-inset caption-large"
                         >
                           <span>{{ childlink.title | escape }}</span>
-                          {% render 'icon-caret' %}
                         </summary>
                         <ul
                           id="HeaderMenu-SubMenuList-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
@@ -89,11 +87,24 @@
             {% endif %}
           >
             <span
+              class="menu-link-label"
               {%- if link.current %}
                 class="header__active-menu-item"
               {% endif %}
             >
               {{- link.title | escape -}}
+              {% if link.handle == 'store' %}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
+              {% endif %}
             </span>
           </a>
         {%- endif -%}
