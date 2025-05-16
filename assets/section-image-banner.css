@@ -322,6 +322,11 @@
   margin-left: 40px;
 }
 
+.button.button--secondary:after {
+  display: none;
+}
+
+
 .banner__heading strong {
   font-weight: bold;
 }
