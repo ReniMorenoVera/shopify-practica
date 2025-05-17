@@ -126,12 +126,39 @@
                   <div class="rte">
                     {{ block.settings.text }}
                     {%- assign plain_text = block.settings.text | strip_html -%}
-                    {%- if plain_text contains '3D'
-                      or plain_text contains 'Laser'
-                      or plain_text contains 'Expert'
-                      or plain_text contains 'Bespoke'
-                    -%}
+                    {%- if plain_text contains '3D' -%}
                       {% render 'icon-arrow-multicolumn' %}
+                      <div class="hover-content">
+                        <h2>3D Printing</h2>
+                        <p>Discover our wide range of 3D printing options in our state-of-the-art London facilities.</p>
+                        <a href="#" class="button">GET STARTED</a>
+                      </div>
+                    {%- elsif plain_text contains 'Expert' -%}
+                      {% render 'icon-arrow-multicolumn' %}
+                      <div class="hover-content">
+                        <h2>Expert Consultation</h2>
+                        <p>
+                          Our in-house experts will assist you with complex technical ideas making your concepts a
+                          reality.
+                        </p>
+                        <a href="#" class="button">TALK TO AN EXPERT</a>
+                      </div>
+                    {%- elsif plain_text contains 'Laser' -%}
+                      {% render 'icon-arrow-multicolumn' %}
+                      <div class="hover-content">
+                        <h2>Laser Cutting</h2>
+                        <p>Bring your ideas to life with laser cutting and engraving across a range of materials.</p>
+                        <a href="#" class="button">EXPLORE MORE</a>
+                      </div>
+                    {%- elsif plain_text contains 'Bespoke' -%}
+                      {% render 'icon-arrow-multicolumn' %}
+                      <div class="hover-content">
+                        <h2>Bespoke Fabrication</h2>
+                        <p>
+                          Our bespoke fabrication services provide the expert attention your special projects require.
+                        </p>
+                        <a href="#" class="button">START YOUR PROJECT</a>
+                      </div>
                     {%- endif -%}
                   </div>
                 {%- endif -%}

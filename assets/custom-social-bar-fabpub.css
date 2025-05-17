@@ -60,3 +60,16 @@
   color: #121212;
   font-size: 20px;
 }
+
+.custom-social-bar .right-icons svg {
+  fill: currentColor;
+}
+
+.social-icons-container {
+  width: 51px;
+  height: 168.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
