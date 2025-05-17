@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 
 .banner {
@@ -10,9 +9,8 @@
   position: relative;
   align-items: flex-start;
   width: calc(100% - 200px);
-  height: 740px;
+  height: 830px;
   margin: 0 auto;
-
 }
 
 .banner__box {
@@ -20,7 +18,6 @@
   margin-top: 40px;
   margin-right: 529px;
 }
-
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
 .banner__box.gradient {
   transform: perspective(0);
@@ -319,7 +316,15 @@
   line-height: 1.1;
   color: white;
   font-family: 'Source Serif 4', serif;
-  margin-left: 40px;
+}
+
+.banner__box {
+  right: 30px;
+  /*top: 20px;*/
+}
+
+.banner__box h2 {
+  width: 571px;
 }
 
 .button.button--secondary:after {
