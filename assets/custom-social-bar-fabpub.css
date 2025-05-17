@@ -57,14 +57,19 @@
 
 .custom-social-bar .right-icons a {
   text-decoration: none;
-  color: #1E1E1E;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #121212;
+  font-size: 20px;
 }
 
 .custom-social-bar .right-icons svg {
-  width: 24px;
-  height: 24px;
   fill: currentColor;
+}
+
+.social-icons-container {
+  width: 51px;
+  height: 168.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
 }
