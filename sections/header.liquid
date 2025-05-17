@@ -119,6 +119,68 @@
       padding-top: 0.5rem;
     }
   }
+
+  .header__menu-item.list-menu__item {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .header__menu-item.list-menu__item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    height: 6px;
+    background-color: transparent;
+  }
+
+  #HeaderMenu-services:hover::after,
+  details[open] > summary #HeaderMenu-services::after {
+    background-color: #000000;
+  }
+
+  #HeaderMenu-about:hover::after,
+  details[open] > summary #HeaderMenu-about::after {
+    background-color: #000000;
+  }
+
+  #HeaderMenu-get-a-quote:hover::after,
+  details[open] > summary #HeaderMenu-get-a-quote::after {
+    background-color: #000000;
+  }
+
+  #HeaderMenu-applications:hover::after,
+  details[open] > summary #HeaderMenu-applications::after {
+    background-color: #000000;
+  }
+
+  #HeaderMenu-book-a-session:hover::after,
+  details[open] > summary #HeaderMenu-book-a-session::after {
+    background-color: #000000;
+  }
+
+  .header__menu-item,
+  .header__menu-item:hover {
+    text-decoration: none !important;
+  }
+
+  .header__active-menu-item {
+    text-decoration: none !important;
+  }
+
+  #HeaderMenu-about span,
+  #HeaderMenu-get-a-quote span,
+  #HeaderMenu-book-a-session span,
+  #HeaderMenu-store span {
+    text-decoration: none;
+  }
+
+  #HeaderMenu-store::after,
+  #HeaderMenu-store:hover::after {
+    display: none;
+  }
+    
 </style>
 
 {%- style -%}
@@ -127,10 +189,7 @@
     display: flex;
     justify-content: space-between;
     height: 100px;
-  }
-
- 
-  
+  } 
 
   .header__heading-logo-wrapper {
     max-width: 100px;
@@ -182,8 +241,18 @@
   }
 
   .header__active-menu-item,
-  .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large.list-menu__item--active {
+  .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
     text-decoration: none;
+  }
+
+  .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
+    text-transform: none;
+    border-bottom: 1px solid #D0D0D0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   @media screen and (max-width: 989px) {
@@ -222,6 +291,36 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+  }
+
+  /* Estilos para el menú dropdown */
+  .header__submenu.list-menu.list-menu--disclosure,
+  [id^="HeaderMenu-MenuList-"] {
+    width: 230px;
+  }
+
+  .header__submenu .header__menu-item,
+  .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
+    text-transform: none;
+    border-bottom: 1px solid #D0D0D0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .header__submenu .header__menu-item:hover,
+  .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+
+  /* Ajustar posición del submenú */
+  .header__submenu.list-menu.list-menu--disclosure {
+    margin-top: 30px !important;
+    padding-top: 0;
+    border-top: none;
   }
 {%- endstyle -%}
 

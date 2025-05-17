@@ -417,5 +417,14 @@ el contenido de .hover-content se vuelve visible (opacity: 1) y se muestra como 
   object-fit: cover;
 }
 
-
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 51px;
+  top: 373px;
+  position: absolute;
+}
 
