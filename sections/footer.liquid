@@ -6,7 +6,7 @@
       <!-- Newsletter Section -->
       <div class="footer__newsletter">
         <h2>
-          Stay inspired and fuel your creativity with the Fab.Pub newsletter! Sign up now and get the latest updates.
+          {{ section.settings.newsletter_heading }}
         </h2>
         <div class="newsletter-form">
           <input type="email" placeholder="YOUR EMAIL" class="newsletter-input">
@@ -41,32 +41,34 @@
         <div class="footer__contact-column">
           <h3>Contact Us</h3>
           <ul class="footer__list">
-            <li>+44 (0)203 559 6798</li>
-            <li>info@fab.pub</li>
+            <li>{{ section.settings.phone }}</li>
+            <li>{{ section.settings.email }}</li>
           </ul>
           <div class="footer__social">
-            {% render 'icon-instagram' %}
-            {%- if settings.social_instagram_link != blank -%}
-              <a
-                href="{{ settings.social_instagram_link }}"
-                target="_blank"
-                rel="noopener"
-                class="social-icon-instagram"
-              >
-              </a>
-            {%- endif -%}
-
-            {% render 'icon-facebook' %}
-            {%- if settings.social_facebook_link != blank -%}
-              <a href="{{ settings.social_facebook_link }}" target="_blank" rel="noopener" class="social-icon-facebook">
-              </a>
-            {%- endif -%}
-
-            {% render 'icono-linkedin' %}
-            {%- if settings.social_linkedin_link != blank -%}
-              <a href="{{ settings.social_linkedin_link }}" target="_blank" rel="noopener" class="social-icon-linkedin">
-              </a>
-            {%- endif -%}
+            <a
+              href="{{ section.settings.social_instagram_link }}"
+              target="_blank"
+              rel="noopener"
+              class="social-icon-instagram"
+            >
+              {% render 'icon-instagram' %}
+            </a>
+            <a
+              href="{{ section.settings.social_facebook_link }}"
+              target="_blank"
+              rel="noopener"
+              class="social-icon-facebook"
+            >
+              {% render 'icon-facebook' %}
+            </a>
+            <a
+              href="{{ section.settings.social_linkedin_link }}"
+              target="_blank"
+              rel="noopener"
+              class="social-icon-linkedin"
+            >
+              {% render 'icono-linkedin' %}
+            </a>
           </div>
         </div>
       </div>
@@ -273,22 +275,30 @@
   ],
   "settings": [
     {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
       "type": "text",
       "id": "newsletter_heading",
-      "default": "Stay inspired and fuel your creativity with the Fab.Pub newsletter!",
-      "label": "Newsletter Heading"
+      "label": "Newsletter Heading",
+      "default": "Stay inspired and fuel your creativity with the Fab.Pub newsletter!"
+    },
+    {
+      "type": "header",
+      "content": "Contact Information"
     },
     {
       "type": "text",
       "id": "phone",
-      "default": "+44 (0)203 559 6798",
-      "label": "Phone Number"
+      "label": "Phone Number",
+      "default": "+44 (0)203 559 6798"
     },
     {
       "type": "text",
       "id": "email",
-      "default": "info@fab.pub",
-      "label": "Email Address"
+      "label": "Email Address",
+      "default": "info@fab.pub"
     },
     {
       "type": "header",
@@ -297,17 +307,20 @@
     {
       "type": "url",
       "id": "social_instagram_link",
-      "label": "Instagram URL"
+      "label": "Instagram URL",
+      "info": "Full URL to your Instagram profile"
     },
     {
       "type": "url",
       "id": "social_facebook_link",
-      "label": "Facebook URL"
+      "label": "Facebook URL",
+      "info": "Full URL to your Facebook page"
     },
     {
       "type": "url",
       "id": "social_linkedin_link",
-      "label": "LinkedIn URL"
+      "label": "LinkedIn URL",
+      "info": "Full URL to your LinkedIn profile"
     }
   ]
 }
