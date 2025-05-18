@@ -1,0 +1,49 @@
+{{ 'section-services-hero.css' | asset_url | stylesheet_tag }}
+
+<div class="services-hero page-width">
+  <div class="services-hero__content">
+    {%- if section.settings.title != blank -%}
+      <h1 class="services-hero__title">{{ section.settings.title | escape }}</h1>
+    {%- endif -%}
+
+    {%- if section.settings.subtitle != blank -%}
+      <p class="services-hero__subtitle">{{ section.settings.subtitle | escape }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.description != blank -%}
+      <div class="services-hero__description rte">
+        {{ section.settings.description }}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Services Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Services"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Tailored to your needs"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Services Hero"
+    }
+  ]
+}
+{% endschema %}
