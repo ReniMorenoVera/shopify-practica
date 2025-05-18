@@ -27,32 +27,19 @@
             "heading": "Info",
             "menu": "footer"
           }
-        },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
-          }
         }
       },
       "block_order": [
         "footer-0",
-        "footer-1",
-        "footer-2"
+        "footer-1"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
-        "show_social": true,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
-        "payment_enable": true,
-        "show_policy": false,
-        "margin_top": 48,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "phone": "+44 (0)203 559 6798",
+        "email": "info@fab.pub",
+        "social_instagram_link": "https://www.instagram.com/fab.pub/",
+        "social_facebook_link": "https://www.facebook.com/FabPubCo",
+        "social_linkedin_link": "https://www.linkedin.com/company/fab-pub/"
       }
     }
   },
