@@ -5,7 +5,7 @@
   line-height: 120%;
   text-align: center;
   margin: 0 auto;
-  width: 100%;
+  width: calc(100% - 70px);
 }
 .multicolumn-list {
   margin: 0;
