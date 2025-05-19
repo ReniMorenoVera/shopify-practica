@@ -53,10 +53,22 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "custom_social_bar_fabpub_UFX9eP": {
+      "type": "custom-social-bar-fabpub",
+      "name": "Custom Social Bar",
+      "settings": {
+        "side_text": "Fab.Pub Empowering Circular Fabrication",
+        "instagram_url": "",
+        "facebook_url": "",
+        "linkedin_url": "",
+        "youtube_url": ""
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "custom_social_bar_fabpub_UFX9eP"
   ]
 }

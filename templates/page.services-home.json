@@ -60,6 +60,39 @@
       ],
       "settings": {}
     },
+    "image_banner_dBfiVW": {
+      "type": "image-banner",
+      "blocks": {
+        "buttons_KiiXaQ": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "3D PRINTING",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+          }
+        }
+      },
+      "block_order": [
+        "buttons_KiiXaQ"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/banner-services-home.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "contact_form": {
       "type": "form-project",
       "settings": {
@@ -91,8 +124,7 @@
         "message_label": "Project Description*",
         "message_placeholder": "Tell us what you need (please include download links for supporting files i.e WeTransfer if applicable)",
         "message_required": true,
-        "submit_text": "SUBMIT",
-
+        "submit_text": "SUBMIT"
       }
     }
   },
@@ -100,6 +132,7 @@
     "main",
     "services_hero",
     "services_grid",
+    "image_banner_dBfiVW",
     "contact_form"
   ]
 }
