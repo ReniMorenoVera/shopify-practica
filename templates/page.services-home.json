@@ -91,7 +91,8 @@
         "message_label": "Project Description*",
         "message_placeholder": "Tell us what you need (please include download links for supporting files i.e WeTransfer if applicable)",
         "message_required": true,
-        "submit_text": "SUBMIT"
+        "submit_text": "SUBMIT",
+
       }
     }
   },
