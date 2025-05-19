@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -20,6 +21,46 @@
       "type": "services-hero",
       "settings": {
         "title": "Services"
+      }
+    },
+    "rich_text_RFJCTx": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_jNtENb": {
+          "type": "caption",
+          "settings": {
+            "caption": "Get inspired",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_FFPPQ9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tailored to your needs",
+            "heading_size": "h1"
+          }
+        },
+        "text_MbcbjJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover the potential of digital fabrication with FabPub's dedicated team of in-house experts. We specialise in helping you design, 3D modeling, 3D printing, fabricating, prototyping, laser cutting, engraving, and assembling, and provide you with the essential tools to bring your ideas to life.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "caption_jNtENb",
+        "heading_FFPPQ9",
+        "text_MbcbjJ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "services_grid": {
@@ -71,7 +112,7 @@
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false,
+            "button_style_secondary_2": false
           }
         }
       },
@@ -131,6 +172,7 @@
   "order": [
     "main",
     "services_hero",
+    "rich_text_RFJCTx",
     "services_grid",
     "image_banner_dBfiVW",
     "contact_form"
