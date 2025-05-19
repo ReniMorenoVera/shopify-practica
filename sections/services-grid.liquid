@@ -6,17 +6,39 @@
       <div
         class="services-grid__item"
         {{ block.shopify_attributes }}
-        style="background-color: {{ block.settings.background_color }}"
       >
         <div class="services-grid__item-content">
           {%- if block.settings.title != blank -%}
             <h2 class="services-grid__item-title">{{ block.settings.title | escape }}</h2>
-          {%- endif -%}
-
-          {%- if block.settings.description != blank -%}
-            <div class="services-grid__item-description">
-              {{ block.settings.description }}
-            </div>
+            {% if block.settings.title == '3D Printing' %}
+              {% render 'icon-arrow-multicolumn' %}
+              <div class="hover-content">
+                <h2>3D Printing</h2>
+                <p>Discover our wide range of 3D printing options in our state-of-the-art London facilities.</p>
+                <a href="#" class="button">GET STARTED</a>
+              </div>
+            {%- elsif block.settings.title contains 'Expert Consultation' -%}
+              {% render 'icon-arrow-multicolumn' %}
+              <div class="hover-content">
+                <h2>Expert Consultation</h2>
+                <p>Our in-house experts will assist you with complex technical ideas making your concepts a reality.</p>
+                <a href="#" class="button">TALK TO AN EXPERT</a>
+              </div>
+            {%- elsif block.settings.title contains 'Laser Cutting' -%}
+              {% render 'icon-arrow-multicolumn' %}
+              <div class="hover-content">
+                <h2>Laser Cutting</h2>
+                <p>Bring your ideas to life with laser cutting and engraving across a range of materials.</p>
+                <a href="#" class="button">EXPLORE MORE</a>
+              </div>
+            {% else %}
+              {% render 'icon-arrow-multicolumn' %}
+              <div class="hover-content">
+                <h2>Bespoke Fabrication</h2>
+                <p>Our bespoke fabrication services provide the expert attention your special projects require.</p>
+                <a href="#" class="button">START YOUR PROJECT</a>
+              </div>
+            {% endif %}
           {%- endif -%}
 
           {%- if block.settings.link != blank -%}
@@ -45,11 +67,6 @@
           "id": "title",
           "label": "Title",
           "default": "Service name"
-        },
-        {
-          "type": "text",
-          "id": "description",
-          "label": "Description"
         },
         {
           "type": "color",

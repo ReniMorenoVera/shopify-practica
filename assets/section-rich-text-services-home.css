@@ -1,8 +1,15 @@
-.rich-text__text.rte.scroll-trigger.animate--slide-in p {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  } 
+#shopify-section-template--17381716852805__rich_text_Pek9fa .rich-text.landing-services-richtext .rich-text__wrapper .rich-text__blocks.center h2 {
+    font-family: Source Serif 4, sans-serif;
+    font-weight: 600;
+    font-size: 58px;
+    line-height: 1.1;
+    width: 301px;
+    height: 64px;
+    border-bottom: 1px solid #CAB99C;
+}
+
+
+
 
   .rich-text__blocks.center {
     text-align: center;
@@ -17,4 +24,5 @@
       padding-right: 10px;
     }
   }
-  
+
+

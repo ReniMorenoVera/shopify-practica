@@ -17,10 +17,37 @@
         "padding_bottom": 36
       }
     },
-    "services_hero": {
-      "type": "services-hero",
+    "rich_text_Pek9fa": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_jEA6wt": {
+          "type": "caption",
+          "settings": {
+            "caption": "home",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium",
+          }
+        },
+        "heading_ibk9AT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Services",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "caption_jEA6wt",
+        "heading_ibk9AT"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "title": "Services"
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "rich_text_RFJCTx": {
@@ -71,7 +98,6 @@
           "settings": {
             "title": "3D Printing",
             "description": "Service description goes here",
-            "background_color": "#d2d2c7",
             "link": ""
           }
         },
@@ -80,7 +106,6 @@
           "settings": {
             "title": "Laser Cutting",
             "description": "Service description goes here",
-            "background_color": "#b8bfb3",
             "link": ""
           }
         },
@@ -89,7 +114,14 @@
           "settings": {
             "title": "Expert Consultation",
             "description": "Service description goes here",
-            "background_color": "#d4c3b8",
+            "link": ""
+          }
+        },
+        "service_4": {
+          "type": "service",
+          "settings": {
+            "title": "Bespoke Fabrication",
+            "description": "Service description goes here",
             "link": ""
           }
         }
@@ -97,11 +129,12 @@
       "block_order": [
         "service_1",
         "service_2",
-        "service_3"
+        "service_3",
+        "service_4"
       ],
       "settings": {}
     },
-    "image_banner_services_home": {
+    "image_banner_dBfiVW": {
       "type": "image-banner",
       "blocks": {
         "buttons_KiiXaQ": {
@@ -131,9 +164,7 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "show_text_below": true
       }
     },
     "contact_form": {
@@ -169,11 +200,11 @@
         "message_required": true,
         "submit_text": "SUBMIT"
       }
-    }
+    },
   },
   "order": [
     "main",
-    "services_hero",
+    "rich_text_Pek9fa",
     "rich_text_RFJCTx",
     "services_grid",
     "image_banner_dBfiVW",
