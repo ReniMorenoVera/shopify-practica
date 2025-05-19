@@ -137,7 +137,7 @@
       "popup-newsletter": {
         "type": "popup-newsletter",
         "settings": {
-          "show_popup": false,
+          "show_popup": true,
           "title": "Join our community",
           "text": "Enter your email and get the latest updates on our site",
           "email_placeholder": "Email",

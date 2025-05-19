@@ -1,4 +1,7 @@
 {{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
+{%- if template == 'page.services-home' -%}
+  {{ 'section-rich-text-services-home.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
