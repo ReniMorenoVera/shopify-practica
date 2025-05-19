@@ -12,12 +12,14 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "services_hero": {
       "type": "services-hero",
       "settings": {
-        "title": "Services",
+        "title": "Services"
       }
     },
     "services_grid": {
@@ -28,7 +30,8 @@
           "settings": {
             "title": "3D Printing",
             "description": "Service description goes here",
-            "background_color": "#D2D2C7"
+            "background_color": "#d2d2c7",
+            "link": ""
           }
         },
         "service_2": {
@@ -36,7 +39,8 @@
           "settings": {
             "title": "Laser Cutting",
             "description": "Service description goes here",
-            "background_color": "#B8BFB3"
+            "background_color": "#b8bfb3",
+            "link": ""
           }
         },
         "service_3": {
@@ -44,21 +48,58 @@
           "settings": {
             "title": "Expert Consultation",
             "description": "Service description goes here",
-            "background_color": "#D4C3B8"
+            "background_color": "#d4c3b8",
+            "link": ""
           }
         }
       },
-      "block_order": ["service_1", "service_2", "service_3"],
-      "settings": {
-      }
+      "block_order": [
+        "service_1",
+        "service_2",
+        "service_3"
+      ],
+      "settings": {}
     },
     "contact_form": {
-      "type": "services-contact",
+      "type": "form-project",
       "settings": {
+        "top_title": "BOOK YOUR FAB.PUB EXPERIENCE",
         "title": "Tell us about your project",
-        "description": "If you have a design concept in mind and need a functional prototype, our team of designers can help bring your vision to life. Whether you have sketches, concepts, or 2D designs, we can collaborate with you to transform them into 3D files."
+        "description": "If you have a design concept in mind and need a functional prototype, our team of designers can help bring your vision to life. Whether you have sketches, concepts, or 2D designs, we can collaborate with you to transform them into 3D files.",
+        "name_label": "Name*",
+        "name_placeholder": "First Name and Last Name",
+        "name_required": true,
+        "company_label": "Company Name",
+        "company_placeholder": "Company Name",
+        "company_required": false,
+        "email_label": "E-mail address*",
+        "email_placeholder": "name@domain.com",
+        "email_required": true,
+        "phone_label": "Phone number",
+        "phone_placeholder": "Phone number",
+        "phone_required": false,
+        "service_label": "Services*",
+        "service_placeholder": "Choose a Service",
+        "service_required": true,
+        "service_option1": "3D Printing",
+        "service_option2": "Laser Cutting",
+        "service_option3": "Expert Consultation",
+        "service_option4": "Bespoke Fabrication",
+        "budget_label": "Total Budget",
+        "budget_placeholder": "Please specify total maximum budget",
+        "budget_required": false,
+        "message_label": "Project Description*",
+        "message_placeholder": "Tell us what you need (please include download links for supporting files i.e WeTransfer if applicable)",
+        "message_required": true,
+        "submit_text": "SUBMIT",
+
       }
     }
   },
-  "order": ["main", "services_hero", "services_grid", "contact_form"]
-} 
+  "order": [
+    "main",
+    "services_hero",
+    "services_grid",
+    "contact_form"
+  ]
+}
