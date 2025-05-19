@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "services_hero": {
+      "type": "services-hero",
+      "settings": {
+        "title": "Services",
+      }
+    },
+    "services_grid": {
+      "type": "services-grid",
+      "blocks": {
+        "service_1": {
+          "type": "service",
+          "settings": {
+            "title": "3D Printing",
+            "description": "Service description goes here",
+            "background_color": "#D2D2C7"
+          }
+        },
+        "service_2": {
+          "type": "service",
+          "settings": {
+            "title": "Laser Cutting",
+            "description": "Service description goes here",
+            "background_color": "#B8BFB3"
+          }
+        },
+        "service_3": {
+          "type": "service",
+          "settings": {
+            "title": "Expert Consultation",
+            "description": "Service description goes here",
+            "background_color": "#D4C3B8"
+          }
+        }
+      },
+      "block_order": ["service_1", "service_2", "service_3"],
+      "settings": {
+      }
+    },
+    "contact_form": {
+      "type": "services-contact",
+      "settings": {
+        "title": "Tell us about your project",
+        "description": "Share your project details and requirements with us"
+      }
+    }
+  },
+  "order": ["main", "services_hero", "services_grid", "contact_form"]
+} 

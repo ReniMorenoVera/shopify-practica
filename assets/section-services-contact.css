@@ -1,0 +1,132 @@
+.services-contact {
+  padding: 6rem 0;
+  background-color: rgb(18, 18, 18);
+  color: rgb(255, 255, 255);
+}
+
+.services-contact__content {
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-contact__title {
+  margin: 0 0 1rem;
+  font-size: calc(var(--font-heading-scale) * 3.2rem);
+  line-height: 1.2;
+}
+
+.services-contact__description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin: 0 0 4rem;
+  opacity: 0.8;
+}
+
+.services-contact__form {
+  text-align: left;
+}
+
+.contact__fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+.field__input,
+.text-area {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease;
+}
+
+.field__input:focus,
+.text-area:focus {
+  border-color: rgb(255, 255, 255);
+  outline: none;
+}
+
+.field__label {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.text-area {
+  min-height: 15rem;
+  resize: vertical;
+}
+
+.contact__button {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.button--primary {
+  min-width: 15rem;
+  min-height: 4.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  text-transform: uppercase;
+  background: rgb(255, 255, 255);
+  color: rgb(18, 18, 18);
+  border: none;
+  text-decoration: none;
+  padding: 0 3rem;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.button--primary:hover {
+  opacity: 0.8;
+}
+
+.form-status-list {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.4rem;
+  background: rgb(66, 132, 69);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-success {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: 1rem;
+}
+
+.contact__field-error {
+  color: rgb(255, 76, 76);
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 749px) {
+  .services-contact {
+    padding: 4rem 0;
+  }
+
+  .contact__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .services-contact__title {
+    font-size: calc(var(--font-heading-scale) * 2.4rem);
+  }
+} 
