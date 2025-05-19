@@ -101,7 +101,7 @@
       ],
       "settings": {}
     },
-    "image_banner_dBfiVW": {
+    "image_banner_services_home": {
       "type": "image-banner",
       "blocks": {
         "buttons_KiiXaQ": {
@@ -131,7 +131,9 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": true
+        "show_text_below": true,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "contact_form": {
