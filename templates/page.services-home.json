@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -47,7 +56,7 @@
       "type": "services-contact",
       "settings": {
         "title": "Tell us about your project",
-        "description": "Share your project details and requirements with us"
+        "description": "If you have a design concept in mind and need a functional prototype, our team of designers can help bring your vision to life. Whether you have sketches, concepts, or 2D designs, we can collaborate with you to transform them into 3D files."
       }
     }
   },
