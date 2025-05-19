@@ -1,0 +1,192 @@
+.form-project {
+  background-color: #1E1E1E;
+  padding: 40px 60px;
+  /*max-width: calc(100% - 200px);*/
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.form-project__container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.form-project__top-title,
+.form-project__description {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #CAB99C;
+  text-align: center;
+}
+
+.form-project__top-title {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.form-project__description {
+    text-align: center;
+    color: #CAB99C;
+    margin-bottom: 60px;
+    gap: 8px;
+}
+
+.form-project__title {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 1.2;
+  text-align: center;
+  color: #CAB99C;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.form-project__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.form-project__field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .form-project__field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-project__field {
+  position: relative;
+}
+
+.form-project__field input,
+.form-project__field select,
+.form-project__field textarea {
+  padding: 16px 0;
+  background: transparent;
+  border: none;
+  border-radius: none;
+}
+
+.form-project__field input {
+    border-bottom: 1.5px solid #F4F4F0;
+    min-width: 560px;
+    color: #FFFFFF;
+}
+
+.form-project__field input::placeholder,
+.form-project__field select::placeholder,
+.form-project__field textarea::placeholder {
+  color: #F4F4F0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.form-project__field input:focus,
+.form-project__field select:focus,
+.form-project__field textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-project__field label {
+  position: absolute;
+  left: 0px;
+  top: -12px;
+  background: none;
+  color: #CAB99C;
+
+  font-family: 'Source Serif 4', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.form-project__field--full {
+  grid-column: 1 / -1;
+}
+
+.form-project__button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.form-project__button button {
+  background-color: #CAB99C;
+  color: #1E1E1E;
+  border: none;
+  border-radius: 100px;
+  padding: 20px 40px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 1.2;
+  width: 240px;
+  height: 59px;
+}
+
+#service option {
+  color: #1E1E1E;
+}
+
+.form-project__field select {
+  margin-top: 18px;
+  border: none;
+  background-color: #FFFFFF;
+  min-width: 560px;
+  height: 30px;
+  color: #1E1E1E;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#service {
+  padding-left: 16px;
+  color: #1E1E1E;
+}
+
+.form-project__field select option {
+  background-color: #CAB99C;
+  color: #1E1E1E;
+  padding-left: 16px;
+  border-bottom: 1px solid #1E1E1E;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  gap: 8px;
+}
+
+.form-project__field textarea {
+  width: 100%;
+  min-height: 100px;
+  border: 1.5px solid #F4F4F0;
+  border-radius: 0;
+  color: #F4F4F0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  padding: 10px;
+  margin-top: 12px;
+  height: 178px;
+  resize: none;
+}
+
+.form-project__field textarea::placeholder {
+  color: #F4F4F0;
+  font-size: 12px;
+}
+
+

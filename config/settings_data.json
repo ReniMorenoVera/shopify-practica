@@ -133,6 +133,39 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "popup-newsletter": {
+        "type": "popup-newsletter",
+        "settings": {
+          "show_popup": false,
+          "title": "Join our community",
+          "text": "Enter your email and get the latest updates on our site",
+          "email_placeholder": "Email",
+          "button_label": "SUBSCRIBE",
+          "no_thanks_button": "No, thanks"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "menu_type_desktop": "dropdown",
+          "sticky_header_type": "on-scroll-up",
+          "show_line_separator": true,
+          "color_scheme": "",
+          "menu_color_scheme": "",
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "mobile_logo_position": "center",
+          "margin_bottom": 0,
+          "padding_top": 20,
+          "padding_bottom": 20
+        }
+      },
+      "newsletter-popup": {
+        "type": "newsletter-popup",
+        "settings": {}
       }
     },
     "content_for_index": [],

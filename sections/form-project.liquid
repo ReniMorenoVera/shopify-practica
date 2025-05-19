@@ -1,0 +1,328 @@
+{{ 'section-form-project.css' | asset_url | stylesheet_tag }}
+
+<div class="form-project">
+  <div class="form-project__container">
+    <h2 class="form-project__top-title">{{ section.settings.top_title }}</h2>
+    <h1 class="form-project__title">{{ section.settings.title }}</h1>
+    <p class="form-project__description">{{ section.settings.description }}</p>
+
+    <form class="form-project__form" action="/contact" method="post">
+      {%- if form.posted_successfully? -%}
+        <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
+          {% render 'icon-success' %}
+          {{ 'templates.contact.form.post_success' | t }}
+        </div>
+      {%- endif -%}
+
+      <div class="form-project__fields">
+        <div class="form-project__field-row">
+          <div class="form-project__field">
+            <input type="text" id="name" name="name" required placeholder="{{ section.settings.name_placeholder }}">
+            <label for="name">{{ section.settings.name_label }}</label>
+          </div>
+          <div class="form-project__field">
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="{{ section.settings.company_placeholder }}"
+              {% if section.settings.company_required %}
+                required
+              {% endif %}
+            >
+            <label for="company">{{ section.settings.company_label }}</label>
+          </div>
+        </div>
+
+        <div class="form-project__field-row">
+          <div class="form-project__field">
+            <input type="email" id="email" name="email" required placeholder="{{ section.settings.email_placeholder }}">
+            <label for="email">{{ section.settings.email_label }}</label>
+          </div>
+          <div class="form-project__field">
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="{{ section.settings.phone_placeholder }}"
+              {% if section.settings.phone_required %}
+                required
+              {% endif %}
+            >
+            <label for="phone">{{ section.settings.phone_label }}</label>
+          </div>
+        </div>
+
+        <div class="form-project__field-row">
+          <div class="form-project__field">
+            <select
+              id="service"
+              name="service"
+              {% if section.settings.service_required %}
+                required
+              {% endif %}
+            >
+              <option value="" disabled selected>{{ section.settings.service_placeholder }}</option>
+              <option value="option1">{{ section.settings.service_option1 }}</option>
+              <option value="option2">{{ section.settings.service_option2 }}</option>
+              <option value="option3">{{ section.settings.service_option3 }}</option>
+              <option value="option4">{{ section.settings.service_option4 }}</option>
+            </select>
+            <label for="service">{{ section.settings.service_label }}</label>
+          </div>
+          <div class="form-project__field">
+            <input
+              type="text"
+              id="budget"
+              name="budget"
+              placeholder="{{ section.settings.budget_placeholder }}"
+              {% if section.settings.budget_required %}
+                required
+              {% endif %}
+            >
+            <label for="budget">{{ section.settings.budget_label }}</label>
+          </div>
+        </div>
+
+        <div class="form-project__field form-project__field--full">
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            placeholder="{{ section.settings.message_placeholder }}"
+          ></textarea>
+          <label for="message">{{ section.settings.message_label }}</label>
+        </div>
+      </div>
+
+      <div class="form-project__button">
+        <button type="submit">{{ section.settings.submit_text }}</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Project Form",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Form Header"
+    },
+    {
+      "type": "text",
+      "id": "top_title",
+      "label": "Top Title",
+      "default": "BOOK YOUR FAB.PUB EXPERIENCE"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Tell us about your project"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "If you have a design concept in mind and need a functional prototype, our team of designers can help bring your vision to life. Whether you have sketches, concepts, or 2D designs, we can collaborate with you to transform them into 3D files."
+    },
+    {
+      "type": "header",
+      "content": "Name Field Settings"
+    },
+    {
+      "type": "text",
+      "id": "name_label",
+      "label": "Name Field Label",
+      "default": "Name*"
+    },
+    {
+      "type": "text",
+      "id": "name_placeholder",
+      "label": "Name Field Placeholder Text",
+      "default": "First Name and Last Name"
+    },
+    {
+      "type": "checkbox",
+      "id": "name_required",
+      "label": "Required",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Company Field Settings"
+    },
+    {
+      "type": "text",
+      "id": "company_label",
+      "label": "Company Field Label",
+      "default": "Company Name"
+    },
+    {
+      "type": "text",
+      "id": "company_placeholder",
+      "label": "Company Field Placeholder Text",
+      "default": "Company Name"
+    },
+    {
+      "type": "checkbox",
+      "id": "company_required",
+      "label": "Required",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Email Field Settings"
+    },
+    {
+      "type": "text",
+      "id": "email_label",
+      "label": "Email Field Label",
+      "default": "E-mail address*"
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email Field Placeholder Text",
+      "default": "name@domain.com"
+    },
+    {
+      "type": "checkbox",
+      "id": "email_required",
+      "label": "Required",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Phone Field Settings"
+    },
+    {
+      "type": "text",
+      "id": "phone_label",
+      "label": "Phone Field Label",
+      "default": "Phone number"
+    },
+    {
+      "type": "text",
+      "id": "phone_placeholder",
+      "label": "Phone Field Placeholder Text",
+      "default": "Phone number"
+    },
+    {
+      "type": "checkbox",
+      "id": "phone_required",
+      "label": "Required",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Service Field Settings"
+    },
+    {
+      "type": "text",
+      "id": "service_label",
+      "label": "Service Field Label",
+      "default": "Services*"
+    },
+    {
+      "type": "text",
+      "id": "service_placeholder",
+      "label": "Service Field Placeholder Text",
+      "default": "Choose a Service"
+    },
+    {
+      "type": "checkbox",
+      "id": "service_required",
+      "label": "Required",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "service_option1",
+      "label": "Service Option 1",
+      "default": "3D Printing"
+    },
+    {
+      "type": "text",
+      "id": "service_option2",
+      "label": "Service Option 2",
+      "default": "Laser Cutting"
+    },
+    {
+      "type": "text",
+      "id": "service_option3",
+      "label": "Service Option 3",
+      "default": "Expert Consultation"
+    },
+    {
+      "type": "text",
+      "id": "service_option4",
+      "label": "Service Option 4",
+      "default": "Bespoke Fabrication"
+    },
+    {
+      "type": "header",
+      "content": "Budget Field Settings"
+    },
+    {
+      "type": "text",
+      "id": "budget_label",
+      "label": "Budget Field Label",
+      "default": "Total Budget"
+    },
+    {
+      "type": "text",
+      "id": "budget_placeholder",
+      "label": "Budget Field Placeholder Text",
+      "default": "Please specify total maximum budget"
+    },
+    {
+      "type": "checkbox",
+      "id": "budget_required",
+      "label": "Required",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Message Field Settings"
+    },
+    {
+      "type": "text",
+      "id": "message_label",
+      "label": "Message Field Label",
+      "default": "Project Description*"
+    },
+    {
+      "type": "textarea",
+      "id": "message_placeholder",
+      "label": "Message Field Placeholder Text",
+      "default": "Tell us what you need (please include download links for supporting files i.e WeTransfer if applicable)"
+    },
+    {
+      "type": "checkbox",
+      "id": "message_required",
+      "label": "Required",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Submit Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "submit_text",
+      "label": "Submit Button Text",
+      "default": "SUBMIT"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Project Form",
+      "category": "Forms"
+    }
+  ]
+}
+{% endschema %}
