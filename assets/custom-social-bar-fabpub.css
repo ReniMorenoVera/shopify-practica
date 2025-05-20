@@ -73,3 +73,19 @@
   gap: 28px;
   align-items: center;
 }
+
+section.custom-social-bar > .right-icons > .icon-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  align-items: center !important;
+  position: static !important;
+  top: auto !important;
+  max-width: none !important;
+}
+
+@media screen and (max-width: 749px) {
+  .custom-social-bar {
+    display: none;
+  }
+}

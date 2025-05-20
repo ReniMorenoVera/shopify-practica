@@ -1,8 +1,3 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 .banner {
   display: flex;
@@ -11,7 +6,13 @@
   width: calc(100% - 200px);
   height: 830px;
   margin: 0 auto;
+  top: 100px;
 }
+
+.banner__media img {
+  width: 100vw;
+}
+
 
 .banner__box {
   background: transparent;
