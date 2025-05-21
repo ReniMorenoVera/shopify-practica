@@ -108,68 +108,44 @@
         "padding_bottom": 0
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "services_grid": {
+      "type": "services-grid",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "service_1": {
+          "type": "service",
           "settings": {
-            "title": "",
-            "text": "<p><em>3D</em></p><p><em>Printing</em></p>",
-            "link_label": "",
+            "title": "3D Printing",
             "link": ""
           }
         },
-        "column_7xWU3h": {
-          "type": "column",
+        "service_2": {
+          "type": "service",
           "settings": {
-            "title": "",
-            "text": "<p><em>Laser</em></p><p><em>Cutting</em></p>",
-            "link_label": "",
+            "title": "Laser Cutting",
             "link": ""
           }
         },
-        "column2": {
-          "type": "column",
+        "service_3": {
+          "type": "service",
           "settings": {
-            "title": "",
-            "text": "<p><em>Expert</em></p><p><em>Consulation</em></p>",
-            "link_label": "",
+            "title": "Expert Consultation",
             "link": ""
           }
         },
-        "column3": {
-          "type": "column",
+        "service_4": {
+          "type": "service",
           "settings": {
-            "title": "",
-            "text": "<p><em>Bespoke</em></p><p><em>Fabrication</em></p>",
-            "link_label": "",
+            "title": "Bespoke Fabrication",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column1",
-        "column_7xWU3h",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "square",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
+        "service_1",
+        "service_2",
+        "service_3",
+        "service_4"
+      ]
     },
     "multicolumn_CBTTnr": {
       "type": "multicolumn",
@@ -660,7 +636,7 @@
     "custom_social_bar",
     "image_banner",
     "rich_text",
-    "multicolumn",
+    "services_grid",
     "multicolumn_CBTTnr",
     "rich_text_X97zcY",
     "multicolumn_QNhjWj",

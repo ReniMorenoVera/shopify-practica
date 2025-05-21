@@ -74,6 +74,17 @@
   align-items: center;
 }
 
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 51px;
+  top: 373px;
+  position: absolute;
+}
+
 @media screen and (max-width: 749px) {
   .custom-social-bar {
     display: none;

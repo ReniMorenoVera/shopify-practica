@@ -35,7 +35,7 @@
           "settings": {
             "caption": "home",
             "text_style": "caption-with-letter-spacing",
-            "text_size": "medium",
+            "text_size": "medium"
           }
         },
         "heading_ibk9AT": {
@@ -107,7 +107,6 @@
           "type": "service",
           "settings": {
             "title": "3D Printing",
-            "description": "Service description goes here",
             "link": ""
           }
         },
@@ -115,7 +114,6 @@
           "type": "service",
           "settings": {
             "title": "Laser Cutting",
-            "description": "Service description goes here",
             "link": ""
           }
         },
@@ -123,7 +121,6 @@
           "type": "service",
           "settings": {
             "title": "Expert Consultation",
-            "description": "Service description goes here",
             "link": ""
           }
         },
@@ -131,7 +128,6 @@
           "type": "service",
           "settings": {
             "title": "Bespoke Fabrication",
-            "description": "Service description goes here",
             "link": ""
           }
         }
@@ -210,7 +206,7 @@
         "message_required": true,
         "submit_text": "SUBMIT"
       }
-    },
+    }
   },
   "order": [
     "custom_social_bar",

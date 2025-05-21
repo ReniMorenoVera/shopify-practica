@@ -4,36 +4,16 @@
   font-size: 24px;
   line-height: 120%;
   text-align: center;
-  margin: 0 auto;
-  width: calc(100% - 70px);
 }
 .multicolumn-list {
-  margin: 0;
+  margin: 0px;
   padding: 0;
   display: flex;
   gap: 0;
+  position: relative;
+
 }
 
-.page-width {
-  max-width: 100%;
-}
-
-.multicolumn-list__item:nth-child(1) .multicolumn-card {
-  background-color: #cab99c;
-  height: 310px;
-}
-.multicolumn-list__item:nth-child(2) .multicolumn-card {
-  background-color: #aaae99;  
-  height: 310px;
-}
-.multicolumn-list__item:nth-child(3) .multicolumn-card {
-  background-color: #c2a28d;
-  height: 310px;
-}
-.multicolumn-list__item:nth-child(4) .multicolumn-card {
-  background-color: #e5e3d7;
-  height: 310px;
-}
 
 @media screen and (max-width: 989px) {
   .multicolumn .page-width {
@@ -128,11 +108,7 @@
   stroke-width: 2px;
 }
 
-.multicolumn-card-spacing {
-  padding-top: 2.5rem;
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
+
 
 .multicolumn-card__info > :nth-child(2) {
   margin-top: 1rem;
@@ -311,77 +287,8 @@
   height: 310px;
 }
 
-.hover-content {
-  display: none;
-  position: absolute;
-  top: 0px;
-  background: inherit;
-  padding: 4rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  opacity: 0;
-  color: #121212;
-  height: 310px;
-  width: 100%;
-}
 
-.hover-content h2 {
-  font-family: 'Source Serif 4', serif;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 24px;
-  line-height: 120%;
-  letter-spacing: 0%;
-  text-align: center;
-  margin-bottom: 30px;
-}
 
-.hover-content p {
-  font-family: 'Source Serif 4', serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-}
-
-.hover-content .button {
-  background: #FFFFFF;
-  border-radius: 100px;
-  color: #1e1e1e;
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.2;
-  border: 0.7px solid #1E1E1E;
-  width: 240px;
-  height: 59px;
-  margin-top: auto;
-}
-
-.hover-content .button:after {
-  display: none;
-}
-
-/* Hover effect. 
-Cuando el usuario pasa el cursor sobre .multicolumn-card, 
-todos los elementos dentro de .rte 
-(excepto los que tienen la clase .hover-content) se vuelven transparentes (opacity: 0).
- */
-.multicolumn-card:hover .rte > *:not(.hover-content) {
-  opacity: 0;
-}
-
-/* Cuando el usuario pasa el cursor sobre .multicolumn-card, 
-el contenido de .hover-content se vuelve visible (opacity: 1) y se muestra como un flex container.
- */
-.multicolumn-card:hover .hover-content {
-  opacity: 1;
-  display: flex;
-}
 
 
 #Slider-template--17343816925253__multicolumn_NJJj9F .multicolumn-card__info {
