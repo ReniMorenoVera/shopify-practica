@@ -73,3 +73,9 @@
   gap: 28px;
   align-items: center;
 }
+
+@media screen and (max-width: 749px) {
+  .custom-social-bar {
+    display: none;
+  }
+}
