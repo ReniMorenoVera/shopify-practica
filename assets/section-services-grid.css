@@ -1,13 +1,16 @@
 .services-grid__container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 100%;
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
 }
 
 .page-width {
-  max-width: calc(100% - 100px);
+  max-width: calc(100% - 35px);
 }
+
+
 @media screen and (max-width: 749px) {
   .page-width {
     max-width: 100%;
@@ -19,11 +22,14 @@
 .services-grid__item {
   position: relative;
   display: flex;
-  height: 310px;
-  padding: 0;
-  display: flex;
+  flex: 1;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  padding: 20px;
+  height: 375px;
+  max-width: 375px;
+  gap: 12px;
 }
 
 .services-grid__item:nth-child(1) {
@@ -48,13 +54,16 @@
   font-size: 24px;
   font-style: italic;
   text-align: center;
+  justify-self: center;
   max-width: 276px;
-  display: flex;
   margin: 0 auto;
   padding: 0;
 }
-
-
+@media screen and (max-width: 500px) {
+  .services-grid__item-title {
+    display: none;
+  }
+}
 
 .services-grid__item-description {
   display: none;
@@ -76,25 +85,11 @@
   display: block;
   stroke-width: 2px;
 }
-
-@media screen and (max-width: 989px) {
-  .services-grid__container {
-    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Ajuste dinámico */
-    grid-auto-flow: row; /* Asegura una correcta distribución */
-
+@media screen and (max-width: 500px) {
+  .services-grid__item-content svg {
+    display: none;
   }
 }
-
-@media screen and (max-width: 749px) {
-  .services-grid__container {
-    grid-template-columns: 1fr;
-  }
-
-  .services-grid__item {
-    min-height: auto;
-    padding: 1.5rem;
-  }
-} 
 
 .hover-content {
   position: absolute;
@@ -111,45 +106,91 @@
   opacity: 0;
   color: #121212;
   visibility: hidden;
-  padding: 0 1.5rem; /* Menos padding para evitar desbordes */
+  padding: 0 1.5rem; 
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   height: 100%;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 449px) {
   .hover-content {
     position: relative;
     top: auto;
     left: auto;
     transform: none;
     width: 100%;
-    max-width: 100%;
-    padding: 10px;
+    padding: 0;
     text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
-    margin-bottom: 80px;
+    height: 375px;
+    box-sizing: border-box;
   }
+
+  .hover-content .button {
+    max-width: 320px;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .services-grid__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .services-grid__item .hover-content {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    transform: none;
+  }
+
+    .services-grid__item-content .hover-content h2 {
+      font-size: 24px;
+    }
+    .services-grid__item-content .hover-content p {
+      font-size: 20px;
+      min-width: 335px;
+      height: 60px;
+    }
+    
+    .hover-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px; /* Espacio uniforme entre los elementos */
+    }
+    
+    .hover-content h2,
+    .hover-content p {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .hover-content h2 {
+      margin-top: 40px;
+    }
+
+    
+    .hover-content .button {
+      bottom: 40px;
+    }
+    .services-grid__item {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+  
 }
 
-/* Hover effect. 
-Cuando el usuario pasa el cursor sobre .multicolumn-card, 
-todos los elementos dentro de .rte 
-(excepto los que tienen la clase .hover-content) se vuelven transparentes (opacity: 0).
- */
- .services-grid__item:hover .services-grid__item-content > *:not(.hover-content) {
-  opacity: 0;
-}
-
-/* Cuando el usuario pasa el cursor sobre .multicolumn-card, 
-el contenido de .hover-content se vuelve visible (opacity: 1) y se muestra como un flex container.
- */
-.services-grid__item:hover .hover-content {
-  opacity: 1;
-  visibility: visible;
+@media screen and (min-width: 500px) {
+  .services-grid__item:hover .services-grid__item-content > *:not(.hover-content) {
+    opacity: 0;
+  }
+  .services-grid__item:hover .hover-content {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .hover-content .button {
@@ -162,15 +203,11 @@ el contenido de .hover-content se vuelve visible (opacity: 1) y se muestra como 
   font-size: 16px;
   line-height: 1.2;
   border: 0.7px solid #1E1E1E;
-  width: 240px;
+  width: auto;
+  max-width: 240px;
+  width: 100%;
   height: 59px;
   margin-top: 58px;
-}
-
-.services-grid__container .services-grid__item:nth-child(2) .hover-content .button {
-  bottom: 0px;
-  top: 25px;
-  position: relative;
 }
 
 .hover-content .button:after {
@@ -185,7 +222,6 @@ el contenido de .hover-content se vuelve visible (opacity: 1) y se muestra como 
   line-height: 120%;
   letter-spacing: 0%;
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .hover-content p {
@@ -195,37 +231,8 @@ el contenido de .hover-content se vuelve visible (opacity: 1) y se muestra como 
   line-height: 1.2;
   text-align: center;
 }
-
-@media screen and (max-width: 768px) {
-  .hover-content {
-    position: relative;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-  
-
-  .hover-content h2 {
-    font-size: clamp(18px, 5vw, 24px); /* Mínimo 18px, máximo 24px */
-  }
-  
-  .hover-content p {
-    font-size: clamp(14px, 4vw, 20px);
-  }
-  
-  .hover-content .button {
-    font-size: clamp(12px, 4vw, 16px);
-  }
-  
+ 
 
 
-@media screen and (max-width: 749px) {
-  .services-grid__item {
-    height: auto;
-    padding: 2rem;
-  }
-}
+
+
