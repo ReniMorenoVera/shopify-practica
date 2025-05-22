@@ -115,6 +115,7 @@
           "type": "service",
           "settings": {
             "title": "3D Printing",
+            "background_color": "#d2d2c7",
             "link": ""
           }
         },
@@ -122,6 +123,7 @@
           "type": "service",
           "settings": {
             "title": "Laser Cutting",
+            "background_color": "#d2d2c7",
             "link": ""
           }
         },
@@ -129,6 +131,7 @@
           "type": "service",
           "settings": {
             "title": "Expert Consultation",
+            "background_color": "#d2d2c7",
             "link": ""
           }
         },
@@ -136,6 +139,7 @@
           "type": "service",
           "settings": {
             "title": "Bespoke Fabrication",
+            "background_color": "#d2d2c7",
             "link": ""
           }
         }
@@ -145,7 +149,8 @@
         "service_2",
         "service_3",
         "service_4"
-      ]
+      ],
+      "settings": {}
     },
     "multicolumn_CBTTnr": {
       "type": "multicolumn",
@@ -247,6 +252,12 @@
         "text_TcEdFV": {
           "type": "text",
           "settings": {
+            "text": "<p>From design to 3D fabrication, we're here to assist you in your entire creative process, transforming intricate technical concepts into reality.</p>"
+          }
+        },
+        "text_6zTYjX": {
+          "type": "text",
+          "settings": {
             "text": "<p>Fab.Pub is the mobile 3D factory of the future, empowering creativity with minimum carbon footprint. From design to fabrication, we're here to assist you in your entire creative process, transforming your ideas into reality.</p>"
           }
         },
@@ -266,6 +277,7 @@
         "caption_VNG7B8",
         "heading_Mfp3gf",
         "text_TcEdFV",
+        "text_6zTYjX",
         "button_B6Xfdi"
       ],
       "name": "t:sections.rich-text.presets.name",
@@ -376,7 +388,7 @@
             "button_label": "FIND OUT MORE",
             "button_link": "",
             "button_style_secondary": false,
-            "button_label_2": "",
+            "button_label_2": "SHOP NOW",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
