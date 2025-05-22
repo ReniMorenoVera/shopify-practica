@@ -29,52 +29,27 @@
     position: relative;
   }
 
+ 
+
   .header-wrapper {
     position: fixed;
     z-index: 1000;
     background-color: transparent;
   }
 
-  @media screen and (max-width: 989px) {
+  @media screen and (max-width: 749px) {
     .header {
-      min-height: 60px; 
-    }
-
-    .header__heading-logo-wrapper {
-      width: 100px; 
+      min-height: 100px; 
     }
   }
 
-
-  @media screen and (max-width: 989px) {
-    #MainContent {
-      padding-top: 60px; /* Debe ser igual a la altura del header móvil */
-    }
-  }
 
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
-    .section-header {
-      margin-bottom: {{ section.settings.margin_bottom }}px;
-    }
-  }
 
-  @media screen and (min-width: 990px) {
-    .header {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-
-  {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
-    .scrolled-past-header .header__heading-logo-wrapper {
-      width: 75%;
-    }
-  {%- endif -%}
 
   {%- if section.settings.menu_type_desktop != "drawer" -%}
     @media screen and (min-width: 990px) {
@@ -94,32 +69,12 @@
     margin: 0;
   }
 
-  .list-menu--inline {
+  .list-menu--inline li:nth-child(4),
+  .list-menu--inline li:nth-child(5) {
     display: inline-flex;
-    flex-wrap: wrap;
   }  
 
-  .list-menu__item {
-    display: flex;
-    align-items: center;
-    line-height: calc(1 + 0.3 / var(--font-body-scale));
-  }
-
-  .list-menu__item--link {
-    text-decoration: none;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    line-height: calc(1 + 0.8 / var(--font-body-scale));
-  }
-
-  @media screen and (min-width: 750px) {
-    .list-menu__item--link {
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
-    }
-  }
-
-  .header__menu-item.list-menu__item {
+   .header__menu-item.list-menu__item {
     position: relative;
     text-decoration: none;
   }
@@ -256,7 +211,7 @@
     padding-bottom: 10px;
   }
 
-  @media screen and (max-width: 989px) {
+  @media screen and (max-width: 749px) {
     .header {
       height: 60px;
     }
@@ -270,7 +225,7 @@
     padding-top: 80px; 
   }
 
-  @media screen and (max-width: 989px) {
+  @media screen and (max-width: 749px) {
     #MainContent {
       padding-top: 60px; 
     }
