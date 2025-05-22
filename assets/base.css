@@ -5,6 +5,8 @@
   --alpha-badge-border: 0.1;
 }
 
+
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
@@ -3453,4 +3455,27 @@ details-disclosure > details {
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
+}
+
+
+
+.anchor {
+  display: flex;
+  min-height: 100vh;
+}
+
+.home-column {
+  background: #f8f8f3; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  background: transparent; 
+  display: flex;
+  flex-direction: column;
 }
