@@ -239,3 +239,25 @@ details[open].menu-opening > .menu-drawer__submenu {
     transition: none !important;
   }
 }
+
+.menu-drawer__utility-links {
+  padding: 0;
+  background-color: rgba(var(--color-foreground), 0.03);
+  position: relative;
+}
+
+.menu-drawer__utility-links .header__search {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+}
+
+.menu-drawer__utility-links .header__icon--search {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-drawer__utility-links .header__icon--search .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
