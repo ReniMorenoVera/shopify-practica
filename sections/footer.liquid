@@ -83,7 +83,6 @@
     border-style: solid;
     border-color: #d0d0d0;
     border-top: none;
-    height: 356px;
     padding: 0 16px;
   }
 
@@ -127,6 +126,7 @@
 
   .newsletter-input::placeholder {
     color: #000;
+    text-transform: uppercase;
   }
 
   .newsletter-input:focus {
@@ -183,7 +183,6 @@
   .architecture-column {
     display: flex;
     flex-direction: column;
-    margin-top: 24px;
   }
 
   .footer__contact-column {
@@ -241,16 +240,14 @@
       border: none;
       background: #ffffff;
       display: flex;
-      margin-right: 16px;
-      margin-left: 16px;
-      justify-content: center;
+      padding: 0 16px;
+      min-width: 335px;
     }
     .footer__container,
     .footer__content {
       width: 100%;
-      min-width: 343px;
+      min-width: 335px;
       height: auto;
-      position: static;
       display: flex;
       flex-direction: column;
     }
@@ -258,7 +255,6 @@
       display: none;
     }
     .footer__newsletter h2 {
-      width: 100%;
       margin-bottom: 24px;
       margin-top: 75px;
     }
@@ -281,7 +277,6 @@
       width: 335px;
       height: 59px;
       gap: 10px;
-      margin-bottom: 30px;
     }
 
     .footer__contact-column .footer__list {
@@ -296,6 +291,13 @@
     }
     .footer__social {
       margin-bottom: 60px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .footer__content {
+      display: flex;
+      width: 100%;
     }
   }
 </style>
