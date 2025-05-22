@@ -3,13 +3,16 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 !important;
+  padding: 0;
+  gap: 0;
+  max-width: 100%;
 }
 
-.page-width {
-  max-width: calc(100% - 35px);
-}
 
+#shopify-section-template--17343816925253__services_grid {
+    margin-left: 49px;
+    margin-right: 49px;
+}
 
 @media screen and (max-width: 749px) {
   .page-width {
@@ -59,7 +62,7 @@
   margin: 0 auto;
   padding: 0;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 749px) {
   .services-grid__item-title {
     display: none;
   }
@@ -85,7 +88,8 @@
   display: block;
   stroke-width: 2px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 749px) {
+
   .services-grid__item-content svg {
     display: none;
   }
@@ -113,7 +117,13 @@
   height: 100%;
 }
 
-@media screen and (max-width: 449px) {
+@media screen and (max-width: 749px) {
+  
+  #shopify-section-template--17343816925253__services_grid {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
   .hover-content {
     position: relative;
     top: auto;
@@ -137,6 +147,7 @@
   .services-grid__container {
     display: flex;
     flex-direction: column;
+
   }
   .services-grid__item .hover-content {
     opacity: 1;
@@ -145,21 +156,22 @@
     transform: none;
   }
 
-    .services-grid__item-content .hover-content h2 {
+  .services-grid__item-content .hover-content h2 {
       font-size: 24px;
-    }
-    .services-grid__item-content .hover-content p {
-      font-size: 20px;
-      min-width: 335px;
-      height: 60px;
-    }
+  }
+  .services-grid__item-content .hover-content p {
+    font-size: 20px;
+    min-width: 335px;
+    height: 60px;
+  }
     
-    .hover-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px; /* Espacio uniforme entre los elementos */
-    }
+  .hover-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+  }
+
     
     .hover-content h2,
     .hover-content p {
@@ -204,8 +216,9 @@
   line-height: 1.2;
   border: 0.7px solid #1E1E1E;
   width: auto;
-  max-width: 240px;
-  width: 100%;
+  min-width: 240px;
+  width: auto;
+
   height: 59px;
   margin-top: 58px;
 }
