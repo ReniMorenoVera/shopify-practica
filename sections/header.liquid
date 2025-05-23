@@ -40,23 +40,6 @@
     background-color: transparent;
   }
 
-  @media screen and (max-width: 989px) {
-    .header {
-      min-height: 60px;
-    }
-
-    .header__heading-logo-wrapper {
-      width: 100px;
-    }
-  }
-
-
-  @media screen and (max-width: 989px) {
-    #MainContent {
-      padding-top: 60px; /* Debe ser igual a la altura del header móvil */
-    }
-  }
-
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
@@ -74,20 +57,6 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-
-  {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
-    .scrolled-past-header .header__heading-logo-wrapper {
-      width: 75%;
-    }
-  {%- endif -%}
-
-  {%- if section.settings.menu_type_desktop != "drawer" -%}
-    @media screen and (min-width: 990px) {
-      header-drawer {
-        display: none;
-      }
-    }
-  {%- endif -%}
 
   .menu-drawer-container {
     display: flex;
@@ -115,13 +84,6 @@
     padding-bottom: 1rem;
     padding-top: 1rem;
     line-height: calc(1 + 0.8 / var(--font-body-scale));
-  }
-
-  @media screen and (min-width: 750px) {
-    .list-menu__item--link {
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
-    }
   }
 
   .header__menu-item.list-menu__item {
@@ -216,7 +178,9 @@
     align-items: center;
   }
   @media (max-width: 750px) {
-    .header__center, .header__right {
+    .header__center,
+    .header__right,
+    .header__left .header__heading {
       display: none;
     }
   }
@@ -258,145 +222,174 @@
 </style>
 
 {%- style -%}
-  .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-  }
+        .header {
+          padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+          display: flex;
+          justify-content: space-between;
+          height: 100px;
+        }
 
-  .header__heading-logo-wrapper {
-    max-width: 100px;
-  }
+        .header__heading-logo-wrapper {
+          max-width: 100px;
+        }
 
-  .header-wrapper {
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    top: 0;
-    background-color: #F4F4F0;
-  }
+        .header-wrapper {
+          position: fixed;
+          width: 100%;
+          z-index: 1000;
+          top: 0;
+          background-color: #F4F4F0;
+        }
 
-  /* Ocultar carrito e ícono de búsqueda */
-  .header__icon--cart,
-  .header__search,
-  .details-modal,
-  .header__icons--localization,
-  .desktop-localization-wrapper,
-  .header__search-form,
-  .modal__toggle-close,
-  .modal__toggle-open,
-  .header__modal-opener {
-    display: none !important;
-  }
+        /* Ocultar carrito e ícono de búsqueda */
+        .header__icon--cart,
+        .header__search,
+        .details-modal,
+        .header__icons--localization,
+        .desktop-localization-wrapper,
+        .header__search-form,
+        .modal__toggle-close,
+        .modal__toggle-open,
+        .header__modal-opener {
+          display: none !important;
+        }
 
-  /* Ocultar elementos del menú móvil */
-  .menu-drawer__utility-links,
-  .menu-drawer__search {
-    display: none !important;
-  }
+        /* Ocultar elementos del menú móvil */
+        .menu-drawer__utility-links,
+        .menu-drawer__search {
+          display: none !important;
+        }
 
-  .list-menu.list-menu--inline,
-  .header__menu-item.list-menu__item.link.focus-inset {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    font-family: Inter, sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.2;
-    letter-spacing: 0.025em;
-    color: #000000;
-  }
-
-
-  .header__active-menu-item,
-  .header__menu-item.list-menu__item.link.focus-inset {
-    text-transform: uppercase;
-  }
+        .list-menu.list-menu--inline,
+        .header__menu-item.list-menu__item.link.focus-inset {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          font-family: Inter, sans-serif;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 1.2;
+          letter-spacing: 0.025em;
+          color: #000000;
+        }
 
 
-  .header__active-menu-item,
-  .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
-    text-decoration: none;
-  }
+        .header__active-menu-item,
+        .header__menu-item.list-menu__item.link.focus-inset {
+          text-transform: uppercase;
+        }
 
-  .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
-    text-transform: none;
-    border-bottom: 1px solid #D0D0D0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
 
-  @media screen and (max-width: 989px) {
-    .header {
-      height: 60px;
+        .header__active-menu-item,
+        .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
+          text-decoration: none;
+        }
+
+        .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
+          text-transform: none;
+          border-bottom: 1px solid #D0D0D0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        #MainContent {
+          padding-top: 80px;
+        }
+
+
+        .section-header {
+          position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
+          margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+        }
+
+
+
+        /* Estilos para el menú dropdown */
+        .header__submenu.list-menu.list-menu--disclosure,
+        [id^="HeaderMenu-MenuList-"] {
+          width: 230px;
+        }
+
+        .header__submenu .header__menu-item,
+        .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
+          text-transform: none;
+          border-bottom: 1px solid #D0D0D0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 20px;
+          width: 100%;
+        }
+
+        .header__submenu .header__menu-item:hover,
+        .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large:hover {
+          background-color: #000000;
+          color: #FFFFFF;
+        }
+
+        /* Ajustar posición del submenú */
+        .header__submenu.list-menu.list-menu--disclosure {
+          margin-top: 30px !important;
+          padding-top: 0;
+          border-top: none;
+        }
+
+        .header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {
+          position: fixed;
+        }
+
+        @media (max-width: 750px) {
+    .mobile-header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100vw;
+      min-height: 64px;
+      background: #f4f4f0;
+      padding: 0 12px;
+      box-sizing: border-box;
+      position: relative;
     }
-
-    .header__heading-logo-wrapper {
+    .mobile-menu-toggle,
+    .mobile-search-toggle {
+      background: none;
+      border: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .mobile-header-logo {
+      flex: 1 1 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 64px;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .mobile-header-logo img,
+    .mobile-header-logo svg {
+      max-height: 44px;
       max-width: 100px;
+      height: auto;
+      width: auto;
     }
-  }
-
-  #MainContent {
-    padding-top: 80px;
-  }
-
-  @media screen and (max-width: 989px) {
-    #MainContent {
-      padding-top: 60px;
+    .mobile-search-toggle svg {
+      width: 34px;
+      height: 34px;
     }
-  }
-
-  .section-header {
-    position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
-    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-header {
-      margin-bottom: {{ section.settings.margin_bottom }}px;
+    .icon.icon-hamburger {
+      width: 36px;
+      height: 36px;
     }
-  }
-
-  @media screen and (min-width: 990px) {
-    .header {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-
-  /* Estilos para el menú dropdown */
-  .header__submenu.list-menu.list-menu--disclosure,
-  [id^="HeaderMenu-MenuList-"] {
-    width: 230px;
-  }
-
-  .header__submenu .header__menu-item,
-  .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
-    text-transform: none;
-    border-bottom: 1px solid #D0D0D0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    width: 100%;
-  }
-
-  .header__submenu .header__menu-item:hover,
-  .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large:hover {
-    background-color: #000000;
-    color: #FFFFFF;
-  }
-
-  /* Ajustar posición del submenú */
-  .header__submenu.list-menu.list-menu--disclosure {
-    margin-top: 30px !important;
-    padding-top: 0;
-    border-top: none;
   }
 {%- endstyle -%}
 
