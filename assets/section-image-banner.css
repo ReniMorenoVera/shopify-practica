@@ -221,32 +221,9 @@
   }
 }
 
-
-
-@media screen and (max-width: 749px) {
-  .banner--stacked .animate--fixed:first-child > img,
-  .banner--stacked .animate--zoom-in:first-child > img {
-    width: 100%;
-  }
-
-  .banner--stacked .banner__media-half.animate--fixed:nth-child(2) > img,
-  .banner--stacked .banner__media-half.animate--zoom-in:nth-child(2) > img {
-    left: 0;
-    width: 100%;
-  }
-
-  .banner--stacked .banner__media-half {
-    width: 100%;
-  }
-
-  .banner--stacked .banner__media-half + .banner__media-half {
-    order: 1;
-  }
-}
-
 @media screen and (min-width: 750px) {
   .banner__media {
-    height: 100%;
+    width: 10%;
   }
 }
 
