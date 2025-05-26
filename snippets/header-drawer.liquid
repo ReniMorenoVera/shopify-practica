@@ -16,12 +16,14 @@
     </button>
     <div class="mobile-header-logo">
       <a href="{{ routes.root_url }}">
-        {% render 'logo-fab-pub' %}
+        <svg width="50" height="62">
+          {% render 'logo-fab-pub' %}
+        </svg>
       </a>
     </div>
     <button class="mobile-search-toggle" aria-label="Buscar">
-      <svg width="24" height="24">
-        <use xlink:href='#icon-search'></use>
+      <svg width="24" height="24" style="margin-top: 15px;">
+        {% render 'icon-search' %}
       </svg>
     </button>
   </div>
@@ -40,17 +42,17 @@
     <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
       <div
         class="menu-drawer__top-bar"
-        style="display: flex; align-items: center; justify-content: space-between; background: #191919; color: #fff; padding: 0 1.5rem; height: 56px; width: 100%;"
+        style="display: flex; align-items: center; justify-content: space-between; background: #191919; color: #ffffff; padding: 10px 29px 10px 35px; height: 96px; width: 100%;"
       >
-        <span style="font-size: 1.2rem; font-weight: 600; letter-spacing: 0.1em;">MENU</span>
+        <span>MENU</span>
         <button
           aria-label="Cerrar menú"
           onclick="document.getElementById('Details-menu-drawer-container').removeAttribute('open');"
           style="background: none; border: none; color: #fff; font-size: 2rem; display: flex; align-items: center; cursor: pointer;"
         >
           <svg
-            width="32"
-            height="32"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
