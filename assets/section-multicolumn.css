@@ -242,6 +242,21 @@
   object-fit: cover;
 }
 
+#shopify-section-template--17343816925253__multicolumn_QNhjWj .title-wrapper-with-link h2 {
+  margin-left: -70px !important;
+  margin-right: -40px !important;
+}
+
+@media screen and (min-width: 750px) {
+  .section-template--17343816925253__rich_text_X97zcY-padding 
+  .rich-text__wrapper 
+  .rich-text__blocks 
+  .rich-text__text.rte:first-of-type {
+    display: none;
+  }
+}
+
+
 @media screen and (min-width: 750px) {
   #shopify-section-template--17343816925253__multicolumn_m4n7CK {
     margin-left: 49px;
