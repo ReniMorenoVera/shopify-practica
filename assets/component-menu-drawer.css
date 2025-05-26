@@ -71,10 +71,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   }
 }
 
-.menu-drawer__inner-container {
-  position: relative;
-  height: 100%;
-}
+
 
 .menu-drawer__navigation-container {
   display: grid;
@@ -260,4 +257,74 @@ details[open].menu-opening > .menu-drawer__submenu {
   width: 2rem;
   height: 2rem;
 }
+
+/* ESTILOS AGREGADOS POR MI*/
+
+.menu-drawer__top-bar span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: 0.025em;
+  text-align: center;
+  vertical-align: middle;
+  max-width: 47px;
+  height: 18px;
+}
+
+
+.menu-drawer__navigation {
+  padding: 0;
+}
+
+
+.menu-drawer__menu-item.list-menu__item.link.link--text.focus-inset {
+  background-color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: 0.025em;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-top: 30.93px;
+  border-bottom: 1px solid #D0D0D0;
+  display: flex;
+  align-items: center;
+  padding-bottom: 30.93px;
+}
+
+#HeaderDrawer-services svg {
+  margin-left: auto;
+}
+
+#HeaderDrawer-applications svg {
+  margin-left: auto;
+}
+
+#HeaderDrawer-about svg {
+  margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
