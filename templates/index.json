@@ -48,8 +48,6 @@
       "settings": {
         "image": "shopify://shop_images/printers.jpg",
         "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
