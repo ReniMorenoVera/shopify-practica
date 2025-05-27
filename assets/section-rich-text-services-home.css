@@ -3,17 +3,12 @@
     font-weight: 600;
     font-size: 58px;
     line-height: 1.1;
-    width: 301px;
     height: 64px;
     border-bottom: 1px solid #CAB99C;
 }
 
-
-
-
   .rich-text__blocks.center {
     text-align: center;
-    max-width: 1480px;
     width: 100%;
   }
   
@@ -23,6 +18,85 @@
       padding-left: 10px;
       padding-right: 10px;
     }
+
+    .linea-marron {
+      min-width: 365px;
+      min-height: 6px;
+      padding: 0 30px;
+    }
+
+    .section-template--17392856498245__rich_text_Pek9fa-padding .rich-text__heading {
+      margin-left: 16px;
+    }
+
+    .breadcrumbs-container {
+      display: flex;
+      flex-direction: column;
+      padding: 0 35px;
+      width: auto;
+      
+    }
+
+   
+
   }
 
+  .section-template--17392856498245__rich_text_Pek9fa-padding h2 {
+    display: flex;
+    margin-left: 40px;
+  }
 
+  .section-template--17392856498245__rich_text_Pek9fa-padding p {
+    display: none;
+  }
+
+ .linea-marron-full {
+    position: relative;
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .section-template--17392856498245__rich_text_RFJCTx-padding svg, 
+  .section-template--17392856498245__rich_text_RFJCTx-padding nav {
+    display: none;
+  }
+
+  #section-template--17392856498245__rich_text_Pek9fa-padding .rich-text__wrapper .rich-text__blocks .breadcrumbs-container {
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.025rem;
+    padding: 0;
+    display: flex;
+    text-align: left;            
+  
+  }
+
+  .breadcrumbs-container a, span{
+    text-decoration: none;
+    color: #121212;
+}
+
+.breadcrumbs-container {
+  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+  align-items: center; /* Asegura buena distribución vertical */
+  flex-wrap: wrap; /* Evita problemas en pantallas pequeñas */
+  padding-right: 1210px; /* Un pequeño margen en móviles */
+}
+
+.rich-text__blocks.center h2 {
+  font-size: clamp(28px, 8vw, 58px); /* Se ajusta mejor en móviles */
+  height: auto;
+  word-break: break-word; /* Previene desbordamientos */
+}
+
+.linea-marron-full {
+  width: 90vw; /* Ajusta en móviles */
+  max-width: 1200px; /* No se expande demasiado en desktop */
+  height: 2px;
+  background-color: #CAB99C;
+  margin: auto; /* Centrada en cualquier pantalla */
+}
