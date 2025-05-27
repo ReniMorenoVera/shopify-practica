@@ -164,10 +164,8 @@
 }
 
 .page-width.section-template--17343816925253__multicolumn_QNhjWj-padding.isolate.scroll-trigger.animate--slide-in .title-wrapper-with-link h2{
-  min-width: 375px;
-  margin-left: 10px;
-  margin-right: 10px;
   margin-bottom: 30px;
+  padding: 0 40px;
 }
 
 @media screen and (max-width: 749px) {
@@ -247,6 +245,10 @@
   margin-left: -70px;
   margin-right: -40px;
 }
+}
+
+.section-template--17343816925253__rich_text_X97zcY-padding p {
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 750px) {
