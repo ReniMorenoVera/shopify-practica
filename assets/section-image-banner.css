@@ -1,10 +1,8 @@
 .banner {
-  width: 100%;
   margin: 0;
   height: auto;
   display: flex;
   position: relative;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -36,6 +34,8 @@
   font-family: 'Source Serif 4', serif;
   display: flex;
   width: 100%;
+  min-width: 671px;
+  margin-left: 500px;
 }
 
 

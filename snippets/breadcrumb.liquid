@@ -1,0 +1,20 @@
+{{ 'breadcrumb.css' | asset_url | stylesheet_tag }}
+
+{% unless template == 'index' %}
+  <nav class="breadcrumbs-container">
+    <a href="{{ routes.root_url }}">HOME</a>
+    {%- if template contains 'product' and product.title != blank -%}
+      <span class="breadcrumbs-delimiter">/</span>
+      {%- if collection.url -%}
+        <a href="{{ collection.url }}">SERVICES</a>
+        <span class="breadcrumbs-delimiter">/</span>
+      {%- endif -%}
+      <span>{{ product.title }}</span>
+    {%- elsif template contains 'article' and article.title != blank -%}
+      <span class="breadcrumbs-delimiter">/</span>
+      <a href="{{ blog.url }}">{{ blog.title }}</a>
+      <span class="breadcrumbs-delimiter">/</span>
+      <span>{{ article.title }}</span>
+    {%- endif -%}
+  </nav>
+{% endunless %}

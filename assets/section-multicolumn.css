@@ -242,9 +242,11 @@
   object-fit: cover;
 }
 
-#shopify-section-template--17343816925253__multicolumn_QNhjWj .title-wrapper-with-link h2 {
-  margin-left: -70px !important;
-  margin-right: -40px !important;
+@media (min-width: 1240px) {
+#shopify-section-template--17343816925253__multicolumn_QNhjWj {
+  margin-left: -70px;
+  margin-right: -40px;
+}
 }
 
 @media screen and (min-width: 750px) {
