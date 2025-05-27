@@ -285,7 +285,7 @@
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="body-page">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -301,11 +301,16 @@
     {% sections 'header-group' %}
     {% section 'announcement-bar' %}
 
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
-    </main>
 
-    {% sections 'footer-group' %}
+    <main role="main" id="main" class="anchor">
+      <div class="home-column">
+        {% section 'custom-social-bar-fabpub' %}
+      </div>
+
+      <div class="main-content">
+        {{ content_for_layout }}
+      </div>
+    </main>
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
@@ -361,6 +366,8 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {% section 'newsletter-popup' %}
+    <div class="column-footer">
+      {% sections 'footer-group' %}
+    </div>
   </body>
 </html>

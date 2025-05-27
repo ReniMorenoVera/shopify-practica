@@ -115,6 +115,7 @@
     flex-direction: column;
     gap: 24px;
     align-items: flex-start;
+
   }
 
   .newsletter-input {
@@ -309,6 +310,97 @@
     .footer__content {
       display: flex;
       width: 100%;
+  @media screen and (max-width: 749px) {
+    .footer {
+      /*width: 100vw;*/
+      border: none;
+      background: #fff;
+      margin: 0 auto;
+    }
+
+    .footer__container {
+      width: 100vw;
+      min-width: 0;
+      padding: 0;
+    }
+
+    .footer__content {
+      max-width: 100vw;
+      min-width: 0;
+      height: auto;
+      padding: 0 16px;
+      position: static;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .footer__newsletter {
+      max-width: 100%;
+      margin: 0 0 32px 0;
+    }
+
+    .footer__newsletter h2 {
+      font-size: 16px;
+      margin-top: 32px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .newsletter-form {
+      width: 100%;
+      gap: 16px;
+    }
+
+    .newsletter-input {
+      font-size: 12px;
+      text-transform: none;
+      width: 335px;
+    }
+
+    .newsletter-input::placeholder {
+      text-transform: none;
+      line-height: 1.4;
+    }
+
+    .newsletter-button {
+      min-width: 335px;
+      padding: 20px 40px;
+      margin-bottom: 30px;
+    }
+
+    .footer__links-wrapper {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      position: static;
+    }
+
+    .footer__contact-column {
+      position: static;
+      left: auto;
+      top: auto;
+      width: 100%;
+      align-items: flex-start;
+    }
+
+    .footer__middle-column {
+      display: none;
+    }
+
+    .footer__contact-column h3 {
+      font-size: 16px;
+    }
+
+    .footer__list {
+      gap: 4px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .footer__social {
+      margin-top: 24px;
+      margin-bottom: 60px;
     }
   }
 </style>
