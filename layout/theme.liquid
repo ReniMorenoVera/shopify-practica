@@ -294,7 +294,10 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {% section 'popup-newsletter' %}
+    {%- if template == 'index' -%}
+      {% section 'popup-newsletter' %}
+    {%- endif -%}
+
     {% sections 'header-group' %}
     {% section 'announcement-bar' %}
 

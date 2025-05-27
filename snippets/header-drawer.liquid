@@ -67,12 +67,11 @@
         </button>
       </div>
       <script>
-        // Oculta la barra negra de MENU cuando un submenú está abierto
+        // ocultar la barra negra de MENU cuando un submenú está abierto
         document.addEventListener('DOMContentLoaded', function () {
           const menuDrawer = document.getElementById('menu-drawer');
           const topBar = document.getElementById('menuDrawerTopBar');
           function checkSubmenuOpen() {
-            // Busca si hay algún details abierto en el menú principal (solo los de primer nivel)
             const detailsList = menuDrawer.querySelectorAll('.menu-drawer__menu > li > details');
             let anyOpen = false;
             detailsList.forEach((details) => {
@@ -89,9 +88,7 @@
           detailsList.forEach((details) => {
             details.addEventListener('toggle', checkSubmenuOpen);
           });
-          // También al hacer click en el menú
           menuDrawer.addEventListener('click', checkSubmenuOpen);
-          // Estado inicial correcto
           checkSubmenuOpen();
         });
 

@@ -119,3 +119,15 @@
     font-size: 24px;
   }
 }
+
+@media screen and (min-width: 749px) {
+  .popup-modal__content {
+    height: auto;
+    aspect-ratio: 1;
+    padding: 24px;
+  }
+
+.popup-modal h2 {
+  font-size: 24px;
+}
+}
