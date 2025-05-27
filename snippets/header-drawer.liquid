@@ -42,13 +42,15 @@
     <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
       <div
         class="menu-drawer__top-bar"
-        style="display: flex; align-items: center; justify-content: space-between; background: #191919; color: #ffffff; padding: 10px 29px 10px 35px; height: 96px; width: 100%;"
+        id="menuDrawerTopBar"
+        style="display: flex; align-items: center; justify-content: space-between; background: #191919; color: #fff; padding: 10px 29px 10px 35px; height: 96px; width: 100%; position: sticky; top: 0; z-index: 1001;"
       >
         <span>MENU</span>
         <button
           aria-label="Cerrar menú"
+          id="menuDrawerCloseBtn"
+          style="background: none; border: none; color: #fff; font-size: 2rem; display: flex; align-items: center; cursor: pointer; z-index: 1100;"
           onclick="document.getElementById('Details-menu-drawer-container').removeAttribute('open');"
-          style="background: none; border: none; color: #fff; font-size: 2rem; display: flex; align-items: center; cursor: pointer;"
         >
           <svg
             width="24"
@@ -64,6 +66,38 @@
           </svg>
         </button>
       </div>
+      <script>
+        // Oculta la barra negra de MENU cuando un submenú está abierto
+        document.addEventListener('DOMContentLoaded', function () {
+          const menuDrawer = document.getElementById('menu-drawer');
+          const topBar = document.getElementById('menuDrawerTopBar');
+          function checkSubmenuOpen() {
+            // Busca si hay algún details abierto en el menú principal (solo los de primer nivel)
+            const detailsList = menuDrawer.querySelectorAll('.menu-drawer__menu > li > details');
+            let anyOpen = false;
+            detailsList.forEach((details) => {
+              if (details.open) anyOpen = true;
+            });
+            if (anyOpen) {
+              topBar.style.display = 'none';
+            } else {
+              topBar.style.display = 'flex';
+            }
+          }
+          // Escuchar toggles de todos los details de primer nivel
+          const detailsList = menuDrawer.querySelectorAll('.menu-drawer__menu > li > details');
+          detailsList.forEach((details) => {
+            details.addEventListener('toggle', checkSubmenuOpen);
+          });
+          // También al hacer click en el menú
+          menuDrawer.addEventListener('click', checkSubmenuOpen);
+          // Estado inicial correcto
+          checkSubmenuOpen();
+        });
+
+          });
+        });
+      </script>
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
@@ -86,6 +120,40 @@
                         class="menu-drawer__submenu has-submenu gradient motion-reduce"
                         tabindex="-1"
                       >
+                        <div
+                          class="menu-drawer__submenu-header"
+                          style="display: flex; align-items: center; background: #191919; color: #fff; height: 56px; padding: 0 1.5rem; position: sticky; top: 0; z-index: 1002;"
+                        >
+                          <button
+                            class="menu-drawer__back-button"
+                            aria-label="Volver"
+                            style="background: none; border: none; color: #fff; font-size: 2rem; display: flex; align-items: center; cursor: pointer; margin-right: 1rem; transform: rotate(180deg);"
+                            onclick="this.closest('details').removeAttribute('open'); "
+                          >
+                            {% render 'icon-arrow' %}
+                          </button>
+                          <span style="flex: 1; text-align: center; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.1em;">
+                            {{- link.title | escape -}}
+                          </span>
+                          <button
+                            aria-label="Cerrar menú"
+                            style="background: none; border: none; color: #fff; font-size: 2rem; display: flex; align-items: center; cursor: pointer; position: absolute; right: 1.5rem; top: 0.5rem; z-index: 1100;"
+                            onclick="document.getElementById('Details-menu-drawer-container').removeAttribute('open');"
+                          >
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                            </svg>
+                          </button>
+                        </div>
                         <div class="menu-drawer__inner-submenu">
                           <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
                             {% render 'icon-arrow' %}
@@ -119,13 +187,42 @@
                                       id="childlink-{{ childlink.handle | escape }}"
                                       class="menu-drawer__submenu has-submenu gradient motion-reduce"
                                     >
-                                      <button
-                                        class="menu-drawer__close-button link link--text focus-inset"
-                                        aria-expanded="true"
+                                      <div
+                                        class="menu-drawer__submenu-header"
+                                        style="display: flex; align-items: center; background: #191919; color: #fff; height: 56px; padding: 0 1.5rem; position: sticky; top: 0; z-index: 1003;"
                                       >
-                                        {% render 'icon-arrow' %}
-                                        {{ childlink.title | escape }}
-                                      </button>
+                                        <button
+                                          class="menu-drawer__back-button"
+                                          aria-label="Volver"
+                                          style="background: none; border: none; color: #fff; font-size: 2rem; display: flex; align-items: center; cursor: pointer; margin-right: 1rem; transform: rotate(180deg);"
+                                          onclick="this.closest('details').removeAttribute('open'); event.stopPropagation();"
+                                        >
+                                          {% render 'icon-arrow' %}
+                                        </button>
+                                        <span style="flex: 1; text-align: center; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.1em;">
+                                          {{- childlink.title | escape -}}
+                                        </span>
+                                        <span style="width: 2.5rem;"></span>
+                                        <button
+                                          aria-label="Cerrar menú"
+                                          id="menuDrawerCloseBtnSubmenu"
+                                          style="background: none; border: none; color: #fff; font-size: 2rem; display: flex; align-items: center; cursor: pointer; position: absolute; right: 1.5rem; top: 0.5rem; z-index: 1100;"
+                                          onclick="document.getElementById('Details-menu-drawer-container').removeAttribute('open');"
+                                        >
+                                          <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          >
+                                            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                                          </svg>
+                                        </button>
+                                      </div>
                                       <ul
                                         class="menu-drawer__menu list-menu"
                                         role="list"

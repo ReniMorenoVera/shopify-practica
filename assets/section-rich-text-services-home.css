@@ -94,9 +94,11 @@
 }
 
 .linea-marron-full {
-  width: 90vw; /* Ajusta en móviles */
-  max-width: 1200px; /* No se expande demasiado en desktop */
+  width: 90vw; 
+  max-width: 1200px; 
   height: 2px;
   background-color: #CAB99C;
-  margin: auto; /* Centrada en cualquier pantalla */
+  margin: auto; 
 }
+
+
