@@ -1,13 +1,18 @@
 .banner {
   position: relative;
   display: flex;
-  justify-content: flex-start; /* alineación izquierda */
+  justify-content: flex-start; 
   align-items: center;
   overflow: hidden;
   width: 100%;
   height: 60vw;
   max-height: 740px;
   min-height: 350px;
+}
+
+.banner__media:nth-of-type(1) img {
+  
+  object-fit: cover;
 }
 
 .banner__buttons .button {
@@ -117,7 +122,52 @@
   display: none;
 }
 
-@media (max-width: 749px) {
+@media (max-width: 1230px) and (min-width: 1000px) {
+  
+  .banner__box {
+    margin-left: 16px;
+  }
+}  
+
+@media (max-width: 1060px) and (min-width: 1000px) {
+  
+  .banner__box {
+    margin-left: 16px;
+    top: 30px;
+  }
+}  
+
+@media (max-width: 750px) and (min-width: 560px) {
+  .banner__content {
+    padding: 0;
+  }
+  .banner__box {
+    margin-left: 16px;
+    top: 100px;
+    width: 520px;
+  }  
+  .banner__content .banner__box .banner__heading {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.1;
+    color: white;
+    font-family: 'Source Serif 4', serif;
+    display: flex;
+    max-width: 671px;
+  }
+  .banner__media:nth-of-type(1) img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+    object-fit: cover;
+  }
+
+}
+
+
+@media (max-width: 560px) {
   .banner {
     height: 575px;
   }
@@ -125,6 +175,7 @@
   .banner__content {
     align-items: center;
     text-align: center;
+    padding: 0;
   }
 
   .banner__box {
@@ -151,7 +202,42 @@
   }
 }
 
+.banner__media:nth-of-type(1) {
+  display: block;
+}
+.banner__media:nth-of-type(2) {
+  display: none;
+}
 
+@media (max-width: 560px) {
+  .banner__media:nth-of-type(1) {
+    display: none;
+  }
+  .banner__media:nth-of-type(2) {
+    display: block;
+  }
+}
+
+@media (max-width: 560px) {
+  .banner {
+    height: 575px; 
+  }
+  
+    .banner__media:nth-of-type(2) img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+    object-fit: cover;
+  }
+
+  .banner__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  
+}
 
 
 /*.banner {
